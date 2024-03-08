@@ -1,0 +1,19 @@
+{
+    "onboardingTitleOne": "Find your  Comfort\nFood here",
+    "onboardingSubTitleOne": "Here You Can find a chef or dish for every\ntaste and color. Enjoy!",
+    "onboardingTitleTwo": "Food Ninja is Where Your\nComfort Food Lives",
+    "onboardingSubTitleTwo": "Enjoy a fast and smooth food delivery at\nyour doorstep",
+    "next":"Next",
+    "loginScreenTitle":"Login To Your Account",
+    "email":"Email",
+    "password":"password",
+    "orContinueWith":"Or Continue With",
+    "forgotYourPassword":"Forgot Your Password?",
+    "login":"Login",
+    "signUpScreenTitle":"Sign Up For Free",
+    "userName":"user name",
+    "createAccount":"Create Account",
+    "keepMeSignedIn":"Keep Me Signed In",
+    "emailMeAboutSpecialPricing":"Email Me About Special Pricing",
+    "alreadyHaveAnAccount":"already have an account?"
+} 

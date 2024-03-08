@@ -1,0 +1,20 @@
+{
+    "onboardingTitleOne": "ابحث عن طعام الراحة \nالخاص بك هنا",
+    "onboardingSubTitleOne": "!هنا يمكنك العثور على طاهٍ أو طبق لكل \nالأذواق والألوان. استمتع",
+    "onboardingTitleTwo": "نينجا فود هو المكان الذي يعيش فيه\n طعامك المفضل",
+    "onboardingSubTitleTwo": "استمتع بتوصيل سريع وسلس للطعام إلى \nباب منزلك",
+    "next":"التالى",
+    "loginScreenTitle":"تسجيل الدخول إلى حسابك",
+    "email":"البريد الالكترونى",
+    "password":"كلمة المرور",
+    "orContinueWith":"او الدخول ب",
+    "forgotYourPassword":"هل نسيت كلمه المرور؟",
+    "login":"تسجيل الدخول",
+    "signUpScreenTitle":"أنشاء جساب مجانى",
+    "userName":"ضع اسمك",
+    "createAccount":"أنشاء حساب",
+    "keepMeSignedIn":"ابقني مسجل",
+    "emailMeAboutSpecialPricing":"راسلني عبر البريد الإلكتروني بخصوص الأسعار الخاصة",
+    "alreadyHaveAnAccount":"هل لديك حساب بالفعل؟"
+    
+}
