@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:foodninja/presentation/resources/assets_manager.dart';
+import 'package:foodninja/presentation/resources/color_manager.dart';
 import 'package:foodninja/presentation/resources/routes_manager.dart';
 import 'package:foodninja/presentation/widget/logo.dart';
 import 'package:sizer/sizer.dart';
@@ -30,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    _startDelay();
+    //   _startDelay();
   }
 
   @override
@@ -43,8 +44,18 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           // fit: StackFit.expand,
           children: [
-            Opacity(
-              opacity: .7,
+            Container(
+              foregroundDecoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    ColorManager.white.withOpacity(.8),
+                    ColorManager.white.withOpacity(0.0)
+                  ],
+                  //   stops: [0.50, 0.4],
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                ),
+              ),
               child: SvgPicture.asset(
                 ImageAssets.pattern,
               ),

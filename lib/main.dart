@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
           ],
           supportedLocales: S.delegate.supportedLocales,
           onGenerateRoute: onGenerateRoute,
-          initialRoute: AppRoute.signUp,
+          initialRoute: AppRoute.login,
         );
       }),
     );

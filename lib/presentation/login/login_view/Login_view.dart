@@ -35,8 +35,18 @@ class _LoginState extends State<Login> {
             children: [
               Stack(
                 children: [
-                  Opacity(
-                    opacity: .7,
+                  Container(
+                    foregroundDecoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          ColorManager.white.withOpacity(.8),
+                          ColorManager.white.withOpacity(0.0)
+                        ],
+                        //   stops: [0.50, 0.4],
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topCenter,
+                      ),
+                    ),
                     child: SvgPicture.asset(
                       ImageAssets.pattern,
                       width: 100.w,
