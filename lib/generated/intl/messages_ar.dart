@@ -26,15 +26,27 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
         "createAccount": MessageLookupByLibrary.simpleMessage("أنشاء حساب"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
+        "emailAndPasswordInvalid": MessageLookupByLibrary.simpleMessage(
+            "البريد الإلكتروني وكلمة المرور غير صالحين"),
         "emailMeAboutSpecialPricing": MessageLookupByLibrary.simpleMessage(
             "راسلني عبر البريد الإلكتروني بخصوص الأسعار الخاصة"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمه المرور؟"),
+        "haveNotAccount":
+            MessageLookupByLibrary.simpleMessage("ليس لديك جساب؟"),
+        "invalidEmail":
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني  غير صالح"),
+        "invalidPassword": MessageLookupByLibrary.simpleMessage(
+            ".يجب أن تكون كلمة المرور 8 أحرف على الأقل"),
         "keepMeSignedIn": MessageLookupByLibrary.simpleMessage("ابقني مسجل"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginScreenTitle":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
+        "nameCantBeEmpty":
+            MessageLookupByLibrary.simpleMessage("الاسم لا يمكن أن يكون فارغا"),
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
+        "noInternetConnection":
+            MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالإنترنت"),
         "onboardingSubTitleOne": MessageLookupByLibrary.simpleMessage(
             "!هنا يمكنك العثور على طاهٍ أو طبق لكل \nالأذواق والألوان. استمتع"),
         "onboardingSubTitleTwo": MessageLookupByLibrary.simpleMessage(
@@ -47,6 +59,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "signUpScreenTitle":
             MessageLookupByLibrary.simpleMessage("أنشاء جساب مجانى"),
+        "theEmailHasAlreadyBeenTaken":
+            MessageLookupByLibrary.simpleMessage("هذا البريد مستخدم بالفعل"),
+        "theEmailOrPasswordIsIncorrect": MessageLookupByLibrary.simpleMessage(
+            "البريد الإلكتروني أو كلمة المرور غير صحيحة"),
         "userName": MessageLookupByLibrary.simpleMessage("ضع اسمك")
       };
 }

@@ -1,0 +1,36 @@
+import 'package:json_annotation/json_annotation.dart';
+part 'register_response.g.dart';
+
+@JsonSerializable()
+class RegisterResponse {
+  bool? status;
+  Data? data;
+  String? token;
+
+  RegisterResponse({this.status, this.data, this.token});
+
+  factory RegisterResponse.fromJson(Map<String, dynamic> json) =>
+      _$RegisterResponseFromJson(json);
+}
+
+@JsonSerializable()
+class Data {
+  String? name;
+  String? email;
+  String? mobile;
+  int? otp;
+  String? updatedAt;
+  String? createdAt;
+  int? id;
+
+  Data(
+      {this.name,
+      this.email,
+      this.mobile,
+      this.otp,
+      this.updatedAt,
+      this.createdAt,
+      this.id});
+
+  factory Data.fromJson(Map<String, dynamic> json) => _$DataFromJson(json);
+}

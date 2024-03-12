@@ -15,5 +15,13 @@
     "createAccount":"Create Account",
     "keepMeSignedIn":"Keep Me Signed In",
     "emailMeAboutSpecialPricing":"Email Me About Special Pricing",
-    "alreadyHaveAnAccount":"already have an account?"
+    "alreadyHaveAnAccount":"already have an account?",
+    "haveNotAccount":"I don't Have account?",
+    "emailAndPasswordInvalid":"email and password invalid.",
+    "invalidEmail":"invalid email.",
+    "invalidPassword":"password must be at least 8 characters.",
+    "theEmailOrPasswordIsIncorrect":"The email or password is incorrect !",
+    "theEmailHasAlreadyBeenTaken":"The email has already been taken.",
+    "nameCantBeEmpty":"Name cant be empty",
+    "noInternetConnection":"No internet connection"
 } 
