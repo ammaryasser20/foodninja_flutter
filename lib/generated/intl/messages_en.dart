@@ -26,16 +26,27 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("already have an account?"),
         "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "emailAndPasswordInvalid":
+            MessageLookupByLibrary.simpleMessage("email and password invalid."),
         "emailMeAboutSpecialPricing": MessageLookupByLibrary.simpleMessage(
             "Email Me About Special Pricing"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Your Password?"),
+        "haveNotAccount":
+            MessageLookupByLibrary.simpleMessage("I don\'t Have account?"),
+        "invalidEmail": MessageLookupByLibrary.simpleMessage("invalid email."),
+        "invalidPassword": MessageLookupByLibrary.simpleMessage(
+            "password must be at least 8 characters."),
         "keepMeSignedIn":
             MessageLookupByLibrary.simpleMessage("Keep Me Signed In"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginScreenTitle":
             MessageLookupByLibrary.simpleMessage("Login To Your Account"),
+        "nameCantBeEmpty":
+            MessageLookupByLibrary.simpleMessage("Name cant be empty"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "noInternetConnection":
+            MessageLookupByLibrary.simpleMessage("No internet connection"),
         "onboardingSubTitleOne": MessageLookupByLibrary.simpleMessage(
             "Here You Can find a chef or dish for every\ntaste and color. Enjoy!"),
         "onboardingSubTitleTwo": MessageLookupByLibrary.simpleMessage(
@@ -49,6 +60,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("password"),
         "signUpScreenTitle":
             MessageLookupByLibrary.simpleMessage("Sign Up For Free"),
+        "theEmailHasAlreadyBeenTaken": MessageLookupByLibrary.simpleMessage(
+            "The email has already been taken."),
+        "theEmailOrPasswordIsIncorrect": MessageLookupByLibrary.simpleMessage(
+            "The email or password is incorrect !"),
         "userName": MessageLookupByLibrary.simpleMessage("user name")
       };
 }

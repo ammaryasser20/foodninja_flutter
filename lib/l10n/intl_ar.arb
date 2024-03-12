@@ -15,6 +15,14 @@
     "createAccount":"أنشاء حساب",
     "keepMeSignedIn":"ابقني مسجل",
     "emailMeAboutSpecialPricing":"راسلني عبر البريد الإلكتروني بخصوص الأسعار الخاصة",
-    "alreadyHaveAnAccount":"هل لديك حساب بالفعل؟"
+    "alreadyHaveAnAccount":"هل لديك حساب بالفعل؟",
+    "haveNotAccount":"ليس لديك جساب؟",
+    "emailAndPasswordInvalid":"البريد الإلكتروني وكلمة المرور غير صالحين",
+    "invalidEmail":"البريد الإلكتروني  غير صالح",
+    "invalidPassword":".يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+    "theEmailOrPasswordIsIncorrect": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+    "theEmailHasAlreadyBeenTaken":"هذا البريد مستخدم بالفعل",
+    "nameCantBeEmpty":"الاسم لا يمكن أن يكون فارغا",
+    "noInternetConnection":"لا يوجد اتصال بالإنترنت"
     
 }

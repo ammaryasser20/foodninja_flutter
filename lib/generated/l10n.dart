@@ -219,6 +219,86 @@ class S {
       args: [],
     );
   }
+
+  /// `I don't Have account?`
+  String get haveNotAccount {
+    return Intl.message(
+      'I don\'t Have account?',
+      name: 'haveNotAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `email and password invalid.`
+  String get emailAndPasswordInvalid {
+    return Intl.message(
+      'email and password invalid.',
+      name: 'emailAndPasswordInvalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `invalid email.`
+  String get invalidEmail {
+    return Intl.message(
+      'invalid email.',
+      name: 'invalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `password must be at least 8 characters.`
+  String get invalidPassword {
+    return Intl.message(
+      'password must be at least 8 characters.',
+      name: 'invalidPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email or password is incorrect !`
+  String get theEmailOrPasswordIsIncorrect {
+    return Intl.message(
+      'The email or password is incorrect !',
+      name: 'theEmailOrPasswordIsIncorrect',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email has already been taken.`
+  String get theEmailHasAlreadyBeenTaken {
+    return Intl.message(
+      'The email has already been taken.',
+      name: 'theEmailHasAlreadyBeenTaken',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name cant be empty`
+  String get nameCantBeEmpty {
+    return Intl.message(
+      'Name cant be empty',
+      name: 'nameCantBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No internet connection`
+  String get noInternetConnection {
+    return Intl.message(
+      'No internet connection',
+      name: 'noInternetConnection',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
