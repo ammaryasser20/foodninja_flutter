@@ -58,12 +58,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "orContinueWith":
             MessageLookupByLibrary.simpleMessage("Or Continue With"),
         "password": MessageLookupByLibrary.simpleMessage("password"),
+        "paymentMethod": MessageLookupByLibrary.simpleMessage("Payment Method"),
         "signUpScreenTitle":
             MessageLookupByLibrary.simpleMessage("Sign Up For Free"),
+        "supTitleOfSignUpProcess": MessageLookupByLibrary.simpleMessage(
+            "This data will be displayed in your account\nprofile for security"),
         "theEmailHasAlreadyBeenTaken": MessageLookupByLibrary.simpleMessage(
             "The email has already been taken."),
         "theEmailOrPasswordIsIncorrect": MessageLookupByLibrary.simpleMessage(
             "The email or password is incorrect !"),
+        "uploadYourPhotoProfile":
+            MessageLookupByLibrary.simpleMessage("Upload Your Photo\nProfile"),
         "userName": MessageLookupByLibrary.simpleMessage("user name")
       };
 }

@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:foodninja/core/local_DB/cash_helper.dart';
 import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/routes_manager.dart';
@@ -26,7 +27,11 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _goNext() async {
-    Navigator.pushReplacementNamed(context, AppRoute.onboarding);
+    if (CashHelper.getBool(key: Keys.notFirstTime)) {
+      Navigator.pushReplacementNamed(context, AppRoute.login);
+    } else {
+      Navigator.pushReplacementNamed(context, AppRoute.signUp);
+    }
   }
 
   @override

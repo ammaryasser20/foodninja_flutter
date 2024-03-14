@@ -7,6 +7,8 @@ import 'package:foodninja/features/login/ui/login_view.dart';
 import 'package:foodninja/features/onboarding/ui/onboarding.dart';
 import 'package:foodninja/features/sign_up/logic/signup_cubit.dart';
 import 'package:foodninja/features/sign_up/ui/sing_up_view.dart';
+
+import 'package:foodninja/features/sign_up/ui/widget/signup_process.dart';
 import 'package:foodninja/features/splash/view.dart';
 
 class AppRoute {
@@ -15,6 +17,7 @@ class AppRoute {
   static const String onboarding = "onboarding";
   static const String signUp = "signUp";
   static const String homeScreen = "homeScreen";
+  static const String signUpProcess = "signUpProcess";
 }
 
 Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
@@ -37,6 +40,13 @@ Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
               ));
     case AppRoute.homeScreen:
       return MaterialPageRoute(builder: (_) => const HomeScreen());
+
+    case AppRoute.signUpProcess:
+      return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+                create: (context) => getIt<SignUpCubit>(),
+                child: SignUpProcess(),
+              ));
   }
   return null;
 }

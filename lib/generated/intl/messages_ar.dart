@@ -57,12 +57,17 @@ class MessageLookup extends MessageLookupByLibrary {
             "نينجا فود هو المكان الذي يعيش فيه\n طعامك المفضل"),
         "orContinueWith": MessageLookupByLibrary.simpleMessage("او الدخول ب"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "paymentMethod": MessageLookupByLibrary.simpleMessage("طر يقة الدفع"),
         "signUpScreenTitle":
             MessageLookupByLibrary.simpleMessage("أنشاء جساب مجانى"),
+        "supTitleOfSignUpProcess": MessageLookupByLibrary.simpleMessage(
+            "سيتم عرض هذه البيانات في ملف تعريف حسابك للحماية"),
         "theEmailHasAlreadyBeenTaken":
             MessageLookupByLibrary.simpleMessage("هذا البريد مستخدم بالفعل"),
         "theEmailOrPasswordIsIncorrect": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني أو كلمة المرور غير صحيحة"),
+        "uploadYourPhotoProfile": MessageLookupByLibrary.simpleMessage(
+            "قم بتحميل الصورة الخاصة بملفك الشخصى"),
         "userName": MessageLookupByLibrary.simpleMessage("ضع اسمك")
       };
 }

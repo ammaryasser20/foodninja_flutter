@@ -23,6 +23,9 @@
     "theEmailOrPasswordIsIncorrect": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
     "theEmailHasAlreadyBeenTaken":"هذا البريد مستخدم بالفعل",
     "nameCantBeEmpty":"الاسم لا يمكن أن يكون فارغا",
-    "noInternetConnection":"لا يوجد اتصال بالإنترنت"
+    "noInternetConnection":"لا يوجد اتصال بالإنترنت",
+    "paymentMethod":"طر يقة الدفع",
+    "supTitleOfSignUpProcess":"سيتم عرض هذه البيانات في ملف تعريف حسابك للحماية",
+    "uploadYourPhotoProfile":"قم بتحميل الصورة الخاصة بملفك الشخصى"
     
 }

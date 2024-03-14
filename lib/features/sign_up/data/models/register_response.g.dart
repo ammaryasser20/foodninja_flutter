@@ -27,8 +27,8 @@ Data _$DataFromJson(Map<String, dynamic> json) => Data(
       email: json['email'] as String?,
       mobile: json['mobile'] as String?,
       otp: json['otp'] as int?,
-      updatedAt: json['updatedAt'] as String?,
-      createdAt: json['createdAt'] as String?,
+      updatedAt: json['updated_at'] as String?,
+      createdAt: json['created_at'] as String?,
       id: json['id'] as int?,
     );
 
@@ -37,7 +37,7 @@ Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
       'email': instance.email,
       'mobile': instance.mobile,
       'otp': instance.otp,
-      'updatedAt': instance.updatedAt,
-      'createdAt': instance.createdAt,
+      'updated_at': instance.updatedAt,
+      'created_at': instance.createdAt,
       'id': instance.id,
     };

@@ -1,6 +1,10 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-enum Keys { notFirstTime }
+enum Keys {
+  notFirstTime,
+  userInfo,
+  token,
+}
 
 class CashHelper {
   static late SharedPreferences sharedPreferences;

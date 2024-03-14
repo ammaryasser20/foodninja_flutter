@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:foodninja/features/splash/data/models/models.dart';
+import 'package:foodninja/features/onboarding/data/models/models.dart';
 
 import 'package:foodninja/main.dart';
 import 'package:foodninja/core/resources/assets_manager.dart';

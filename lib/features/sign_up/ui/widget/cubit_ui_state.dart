@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:foodninja/core/local_DB/cash_helper.dart';
+
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/routes_manager.dart';
 
 import 'package:foodninja/features/sign_up/logic/signup_cubit.dart';
 import 'package:foodninja/features/sign_up/logic/signup_state.dart';
+import 'dart:convert';
 
 class SignUpBlocListener extends StatelessWidget {
   const SignUpBlocListener({super.key});
@@ -26,8 +29,15 @@ class SignUpBlocListener extends StatelessWidget {
               ),
             );
           },
-          success: (loginResponse) {
+          success: (registerResponse) async {
             Navigator.pop(context);
+            Map<String, dynamic> map;
+
+            map = registerResponse.registerResponseToJson();
+            String userInfo = jsonEncode(map["data"]);
+            await CashHelper.putString(key: Keys.userInfo, value: userInfo);
+            await CashHelper.putString(key: Keys.token, value: map["token"]);
+
             Navigator.pushReplacementNamed(context, AppRoute.homeScreen);
           },
           error: (error) {

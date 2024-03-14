@@ -146,37 +146,21 @@ class _LoginState extends State<Login> {
             SizedBox(
               height: 2.h,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                TextButton(
-                  onPressed: () {
-                    context.read<LoginCubit>().navigateToSignUpScreen(context);
-                  },
-                  child: GradientText(
-                    AppStrings.haveNotAccount,
-                    style: const TextStyle(
-                        fontFamily: FontFamilies.bentonSansMedium,
-                        decoration: TextDecoration.underline,
-                        decorationColor: ColorManager.primaryColor),
-                    colors: const [
-                      ColorManager.primaryColorLight,
-                      ColorManager.primaryColor,
-                    ],
-                  ),
-                ),
-                GradientText(
-                  AppStrings.forgotYourPassword,
-                  style: const TextStyle(
-                      fontFamily: FontFamilies.bentonSansMedium,
-                      decoration: TextDecoration.underline,
-                      decorationColor: ColorManager.primaryColor),
-                  colors: const [
-                    ColorManager.primaryColorLight,
-                    ColorManager.primaryColor,
-                  ],
-                ),
-              ],
+            TextButton(
+              onPressed: () {
+                context.read<LoginCubit>().navigateToSignUpScreen(context);
+              },
+              child: GradientText(
+                AppStrings.haveNotAccount,
+                style: const TextStyle(
+                    fontFamily: FontFamilies.bentonSansMedium,
+                    decoration: TextDecoration.underline,
+                    decorationColor: ColorManager.primaryColor),
+                colors: const [
+                  ColorManager.primaryColorLight,
+                  ColorManager.primaryColor,
+                ],
+              ),
             ),
             SizedBox(
               height: 4.h,

@@ -299,6 +299,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Payment Method`
+  String get paymentMethod {
+    return Intl.message(
+      'Payment Method',
+      name: 'paymentMethod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This data will be displayed in your account\nprofile for security`
+  String get supTitleOfSignUpProcess {
+    return Intl.message(
+      'This data will be displayed in your account\nprofile for security',
+      name: 'supTitleOfSignUpProcess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload Your Photo\nProfile`
+  String get uploadYourPhotoProfile {
+    return Intl.message(
+      'Upload Your Photo\nProfile',
+      name: 'uploadYourPhotoProfile',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

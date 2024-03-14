@@ -11,6 +11,7 @@ class LoginResponse {
 
   factory LoginResponse.fromJson(Map<String, dynamic> json) =>
       _$LoginResponseFromJson(json);
+  Map<String, dynamic> loginResponseToJson() => _$LoginResponseToJson(this);
 }
 
 @JsonSerializable()
@@ -19,11 +20,14 @@ class User {
   String? name;
   String? mobile;
   String? email;
+  @JsonKey(name: "email_verified_at")
   String? emailVerifiedAt;
   String? otp;
   String? avatar;
-  String? createdAt;
+   @JsonKey(name: "updated_at")
   String? updatedAt;
+  @JsonKey(name: "created_at")
+  String? createdAt;
 
   User(
       {this.id,
@@ -37,4 +41,5 @@ class User {
       this.updatedAt});
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+  Map<String, dynamic> userToJson() => _$UserToJson(this);
 }
