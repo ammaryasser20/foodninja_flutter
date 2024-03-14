@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:foodninja/features/sign_up/data/models/register_request_body.dart';
 import 'package:foodninja/features/sign_up/logic/signup_cubit.dart';
+import 'package:foodninja/features/sign_up/logic/signup_state.dart';
 import 'package:foodninja/features/sign_up/ui/widget/cubit_ui_state.dart';
 import 'package:foodninja/main.dart';
 import 'package:foodninja/core/resources/assets_manager.dart';
@@ -141,37 +142,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
               SizedBox(
-                height: 2.h,
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 5.w),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: Checkbox(
-                          shape: const CircleBorder(),
-                          activeColor: ColorManager.primaryColorLight,
-                          value: true,
-                          onChanged: (v) {}),
-                    ),
-                    const SizedBox(
-                      width: 5,
-                    ),
-                    Text(
-                      AppStrings.keepMeSignedIn,
-                      style: Theme.of(context).textTheme.displaySmall!.copyWith(
-                            fontFamily: FontFamilies.bentonSansBook,
-                            color: isItDark()
-                                ? ColorManager.white.withOpacity(.5)
-                                : ColorManager.liteGray.withOpacity(.5),
-                          ),
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
                 height: 1.5.h,
               ),
               Padding(
@@ -179,14 +149,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 child: Row(
                   children: [
                     SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: Checkbox(
-                          shape: const CircleBorder(),
-                          activeColor: ColorManager.primaryColorLight,
-                          value: true,
-                          onChanged: (v) {}),
-                    ),
+                        height: 20,
+                        width: 20,
+                        child: BlocBuilder<SignUpCubit, SignUpState>(
+                          builder: (context, state) {
+                            return Checkbox(
+                              shape: const CircleBorder(),
+                              activeColor: ColorManager.primaryColorLight,
+                              value: context
+                                  .read<SignUpCubit>()
+                                  .emailMeAboutSpecialPricing,
+                              onChanged: (v) {
+                                context
+                                    .read<SignUpCubit>()
+                                    .changeEmailMe(v ?? false);
+                              },
+                            );
+                          },
+                        )),
                     const SizedBox(
                       width: 5,
                     ),

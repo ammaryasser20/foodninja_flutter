@@ -64,4 +64,13 @@ class AppStrings {
       S.of(NavigationService.navigatorKey.currentContext!).nameCantBeEmpty;
   static String noInternetConnection =
       S.of(NavigationService.navigatorKey.currentContext!).noInternetConnection;
+
+  static String paymentMethod =
+      S.of(NavigationService.navigatorKey.currentContext!).paymentMethod;
+  static String supTitleOfSignUpProcess = S
+      .of(NavigationService.navigatorKey.currentContext!)
+      .supTitleOfSignUpProcess;
+  static String uploadYourPhotoProfile = S
+      .of(NavigationService.navigatorKey.currentContext!)
+      .uploadYourPhotoProfile;
 }

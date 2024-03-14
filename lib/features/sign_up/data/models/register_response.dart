@@ -11,6 +11,9 @@ class RegisterResponse {
 
   factory RegisterResponse.fromJson(Map<String, dynamic> json) =>
       _$RegisterResponseFromJson(json);
+
+  Map<String, dynamic> registerResponseToJson() =>
+      _$RegisterResponseToJson(this);
 }
 
 @JsonSerializable()
@@ -19,7 +22,9 @@ class Data {
   String? email;
   String? mobile;
   int? otp;
+  @JsonKey(name: "updated_at")
   String? updatedAt;
+  @JsonKey(name: "created_at")
   String? createdAt;
   int? id;
 
@@ -33,4 +38,5 @@ class Data {
       this.id});
 
   factory Data.fromJson(Map<String, dynamic> json) => _$DataFromJson(json);
+  Map<String, dynamic> dataToJson() => _$DataToJson(this);
 }

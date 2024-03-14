@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:foodninja/core/local_DB/cash_helper.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/routes_manager.dart';
 import 'package:foodninja/features/login/logic/cubit/login_cubit.dart';
@@ -25,8 +28,14 @@ class LoginBlocListener extends StatelessWidget {
               ),
             );
           },
-          success: (loginResponse) {
+          success: (loginResponse) async {
             Navigator.pop(context);
+            Map<String, dynamic> map;
+
+            map = loginResponse.loginResponseToJson();
+            String userInfo = jsonEncode(map["user"]);
+            await CashHelper.putString(key: Keys.userInfo, value: userInfo);
+            await CashHelper.putString(key: Keys.token, value: map["token"]);
             Navigator.pushReplacementNamed(context, AppRoute.homeScreen);
           },
           error: (error) {

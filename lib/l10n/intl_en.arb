@@ -23,5 +23,9 @@
     "theEmailOrPasswordIsIncorrect":"The email or password is incorrect !",
     "theEmailHasAlreadyBeenTaken":"The email has already been taken.",
     "nameCantBeEmpty":"Name cant be empty",
-    "noInternetConnection":"No internet connection"
+    "noInternetConnection":"No internet connection",
+    "paymentMethod":"Payment Method",
+    "supTitleOfSignUpProcess":"This data will be displayed in your account\nprofile for security",
+    "uploadYourPhotoProfile":"Upload Your Photo\nProfile"
+ 
 } 
