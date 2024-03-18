@@ -26,6 +26,15 @@
     "noInternetConnection":"No internet connection",
     "paymentMethod":"Payment Method",
     "supTitleOfSignUpProcess":"This data will be displayed in your account\nprofile for security",
-    "uploadYourPhotoProfile":"Upload Your Photo\nProfile"
+    "uploadYourPhotoProfile":"Upload Your Photo\nProfile",
+    "congrats":"Congrats!",
+    "yourProfileIsReadyToUse":"Your Profile Is Ready To Use",
+    "tryAgain": "Try again",
+    "home":"Home",
+    "profile":"Profile",
+    "buy":"Buy",
+    "chat": "Chat",
+    "homeScreenTitle":"Find Your\nFavorite Food",
+    "hintSearchTextFormFile":"What do you want to order?"
  
 } 

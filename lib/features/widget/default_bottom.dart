@@ -18,8 +18,8 @@ class DefaultBottom extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(15),
-      onTap: () {
-        onPressed();
+      onTap: () async {
+        await onPressed();
       },
       child: Container(
           width: width,

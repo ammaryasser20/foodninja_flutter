@@ -1,7 +1,7 @@
 import 'dart:io';
-import 'package:foodninja/core/resources/color_manager.dart';
-import 'package:image_cropper/image_cropper.dart';
-
+import 'package:foodninja/core/helper/helper_function.dart';
+import 'package:foodninja/core/local_DB/cash_helper.dart';
+import 'package:foodninja/core/network/firebase.dart';
 import 'package:bloc/bloc.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
@@ -41,47 +41,38 @@ class SignUpCubit extends Cubit<SignUpState> {
     emit(SignUpState.changeEmailMe(state));
   }
 
-  nextPage(PageController controller) {
-    if (controller.page != 1) {
+  nextPage(PageController controller) async {
+    if (controller.page! < 1) {
       controller.nextPage(
           duration: const Duration(milliseconds: 700), curve: Curves.ease);
-    } else {}
-  }
-
-  setUserImage(ImageSource imageSource) async {
-    final ImagePicker picker = ImagePicker();
-
-    await picker.pickImage(source: imageSource).then((value) async {
-      if (value != null) {
-        CroppedFile? croppedFile = await ImageCropper().cropImage(
-          sourcePath: File(value.path).path,
-          aspectRatioPresets: [
-            CropAspectRatioPreset.square,
-            CropAspectRatioPreset.ratio3x2,
-            CropAspectRatioPreset.original,
-            CropAspectRatioPreset.ratio4x3,
-            CropAspectRatioPreset.ratio16x9
-          ],
-          uiSettings: [
-            AndroidUiSettings(
-              toolbarTitle: 'Cropper',
-              toolbarColor: ColorManager.primaryColor,
-              toolbarWidgetColor: Colors.white,
-              initAspectRatio: CropAspectRatioPreset.original,
-              lockAspectRatio: false,
-            ),
-            IOSUiSettings(
-              
-              title: 'Cropper',
-            ),
-          ],
-        );
-        if (croppedFile != null) {
-          userImage = File(croppedFile.path);
+    } else {
+      emit(const SignUpState.uploadingImage());
+      if (userImage != null) {
+        if (await Connectivity().checkConnectivity() !=
+            ConnectivityResult.none) {
+          final file = File(userImage!.path);
+          if (await FireBaseServices.uploadImage(
+              file: file, id: CashHelper.getInt(key: Keys.userID))) {
+            emit(const SignUpState.successAddImage());
+          } else {
+            emit(SignUpState.errorUploadingImage(error: AppStrings.tryAgain));
+          }
+        } else {
+          emit(SignUpState.errorUploadingImage(
+              error: AppStrings.noInternetConnection));
         }
       }
-    });
+    }
+  }
+
+  Future<void> setUserImage(ImageSource imageSource) async {
+    userImage = await HelperFunction.setImage(imageSource);
     emit(const SignUpState.addImage());
+  }
+
+  deleteImage() {
+    userImage = null;
+    emit(const SignUpState.deleteImage());
   }
 
   bool isEmailAndPasswordValid(RegisterRequestBody registerRequestBody) {

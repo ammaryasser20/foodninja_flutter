@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:foodninja/core/network/api_constants.dart';
+import 'package:foodninja/features/home/data/models/restaurant.dart';
 import 'package:foodninja/features/login/data/models/login_request_body.dart';
 import 'package:foodninja/features/login/data/models/login_response.dart';
 import 'package:foodninja/features/sign_up/data/models/register_request_body.dart';
@@ -16,5 +17,9 @@ abstract class ApiService {
   @POST(ApiConstants.login)
   Future<LoginResponse> login(@Body() LoginRequestBody loginRequestBody);
   @POST(ApiConstants.signUp)
-  Future<RegisterResponse> register(@Body() RegisterRequestBody registerRequestBody);
+  Future<RegisterResponse> register(
+      @Body() RegisterRequestBody registerRequestBody);
+  @GET(ApiConstants.restaurant)
+  Future<AllRestaurant> getAllRestaurants(
+      @Header('Authorization') String token);
 }

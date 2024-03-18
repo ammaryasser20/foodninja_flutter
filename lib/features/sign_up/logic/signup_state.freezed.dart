@@ -24,6 +24,10 @@ mixin _$SignUpState<T> {
     required TResult Function(String error) error,
     required TResult Function(bool data) changeEmailMe,
     required TResult Function() addImage,
+    required TResult Function() deleteImage,
+    required TResult Function() uploadingImage,
+    required TResult Function() successAddImage,
+    required TResult Function(String error) errorUploadingImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +38,10 @@ mixin _$SignUpState<T> {
     TResult? Function(String error)? error,
     TResult? Function(bool data)? changeEmailMe,
     TResult? Function()? addImage,
+    TResult? Function()? deleteImage,
+    TResult? Function()? uploadingImage,
+    TResult? Function()? successAddImage,
+    TResult? Function(String error)? errorUploadingImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +52,10 @@ mixin _$SignUpState<T> {
     TResult Function(String error)? error,
     TResult Function(bool data)? changeEmailMe,
     TResult Function()? addImage,
+    TResult Function()? deleteImage,
+    TResult Function()? uploadingImage,
+    TResult Function()? successAddImage,
+    TResult Function(String error)? errorUploadingImage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -55,6 +67,10 @@ mixin _$SignUpState<T> {
     required TResult Function(Error<T> value) error,
     required TResult Function(ChangeEmailMe<T> value) changeEmailMe,
     required TResult Function(addImage<T> value) addImage,
+    required TResult Function(deleteImage<T> value) deleteImage,
+    required TResult Function(UploadingImage<T> value) uploadingImage,
+    required TResult Function(SuccessAddImage<T> value) successAddImage,
+    required TResult Function(ErrorUploadingImage<T> value) errorUploadingImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +81,10 @@ mixin _$SignUpState<T> {
     TResult? Function(Error<T> value)? error,
     TResult? Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult? Function(addImage<T> value)? addImage,
+    TResult? Function(deleteImage<T> value)? deleteImage,
+    TResult? Function(UploadingImage<T> value)? uploadingImage,
+    TResult? Function(SuccessAddImage<T> value)? successAddImage,
+    TResult? Function(ErrorUploadingImage<T> value)? errorUploadingImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,6 +95,10 @@ mixin _$SignUpState<T> {
     TResult Function(Error<T> value)? error,
     TResult Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult Function(addImage<T> value)? addImage,
+    TResult Function(deleteImage<T> value)? deleteImage,
+    TResult Function(UploadingImage<T> value)? uploadingImage,
+    TResult Function(SuccessAddImage<T> value)? successAddImage,
+    TResult Function(ErrorUploadingImage<T> value)? errorUploadingImage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -142,6 +166,10 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(String error) error,
     required TResult Function(bool data) changeEmailMe,
     required TResult Function() addImage,
+    required TResult Function() deleteImage,
+    required TResult Function() uploadingImage,
+    required TResult Function() successAddImage,
+    required TResult Function(String error) errorUploadingImage,
   }) {
     return initial();
   }
@@ -155,6 +183,10 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(String error)? error,
     TResult? Function(bool data)? changeEmailMe,
     TResult? Function()? addImage,
+    TResult? Function()? deleteImage,
+    TResult? Function()? uploadingImage,
+    TResult? Function()? successAddImage,
+    TResult? Function(String error)? errorUploadingImage,
   }) {
     return initial?.call();
   }
@@ -168,6 +200,10 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(String error)? error,
     TResult Function(bool data)? changeEmailMe,
     TResult Function()? addImage,
+    TResult Function()? deleteImage,
+    TResult Function()? uploadingImage,
+    TResult Function()? successAddImage,
+    TResult Function(String error)? errorUploadingImage,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -185,6 +221,10 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(Error<T> value) error,
     required TResult Function(ChangeEmailMe<T> value) changeEmailMe,
     required TResult Function(addImage<T> value) addImage,
+    required TResult Function(deleteImage<T> value) deleteImage,
+    required TResult Function(UploadingImage<T> value) uploadingImage,
+    required TResult Function(SuccessAddImage<T> value) successAddImage,
+    required TResult Function(ErrorUploadingImage<T> value) errorUploadingImage,
   }) {
     return initial(this);
   }
@@ -198,6 +238,10 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(Error<T> value)? error,
     TResult? Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult? Function(addImage<T> value)? addImage,
+    TResult? Function(deleteImage<T> value)? deleteImage,
+    TResult? Function(UploadingImage<T> value)? uploadingImage,
+    TResult? Function(SuccessAddImage<T> value)? successAddImage,
+    TResult? Function(ErrorUploadingImage<T> value)? errorUploadingImage,
   }) {
     return initial?.call(this);
   }
@@ -211,6 +255,10 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(Error<T> value)? error,
     TResult Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult Function(addImage<T> value)? addImage,
+    TResult Function(deleteImage<T> value)? deleteImage,
+    TResult Function(UploadingImage<T> value)? uploadingImage,
+    TResult Function(SuccessAddImage<T> value)? successAddImage,
+    TResult Function(ErrorUploadingImage<T> value)? errorUploadingImage,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -268,6 +316,10 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function(String error) error,
     required TResult Function(bool data) changeEmailMe,
     required TResult Function() addImage,
+    required TResult Function() deleteImage,
+    required TResult Function() uploadingImage,
+    required TResult Function() successAddImage,
+    required TResult Function(String error) errorUploadingImage,
   }) {
     return loading();
   }
@@ -281,6 +333,10 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function(String error)? error,
     TResult? Function(bool data)? changeEmailMe,
     TResult? Function()? addImage,
+    TResult? Function()? deleteImage,
+    TResult? Function()? uploadingImage,
+    TResult? Function()? successAddImage,
+    TResult? Function(String error)? errorUploadingImage,
   }) {
     return loading?.call();
   }
@@ -294,6 +350,10 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function(String error)? error,
     TResult Function(bool data)? changeEmailMe,
     TResult Function()? addImage,
+    TResult Function()? deleteImage,
+    TResult Function()? uploadingImage,
+    TResult Function()? successAddImage,
+    TResult Function(String error)? errorUploadingImage,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -311,6 +371,10 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function(Error<T> value) error,
     required TResult Function(ChangeEmailMe<T> value) changeEmailMe,
     required TResult Function(addImage<T> value) addImage,
+    required TResult Function(deleteImage<T> value) deleteImage,
+    required TResult Function(UploadingImage<T> value) uploadingImage,
+    required TResult Function(SuccessAddImage<T> value) successAddImage,
+    required TResult Function(ErrorUploadingImage<T> value) errorUploadingImage,
   }) {
     return loading(this);
   }
@@ -324,6 +388,10 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function(Error<T> value)? error,
     TResult? Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult? Function(addImage<T> value)? addImage,
+    TResult? Function(deleteImage<T> value)? deleteImage,
+    TResult? Function(UploadingImage<T> value)? uploadingImage,
+    TResult? Function(SuccessAddImage<T> value)? successAddImage,
+    TResult? Function(ErrorUploadingImage<T> value)? errorUploadingImage,
   }) {
     return loading?.call(this);
   }
@@ -337,6 +405,10 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function(Error<T> value)? error,
     TResult Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult Function(addImage<T> value)? addImage,
+    TResult Function(deleteImage<T> value)? deleteImage,
+    TResult Function(UploadingImage<T> value)? uploadingImage,
+    TResult Function(SuccessAddImage<T> value)? successAddImage,
+    TResult Function(ErrorUploadingImage<T> value)? errorUploadingImage,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -421,6 +493,10 @@ class _$SuccessImpl<T> implements Success<T> {
     required TResult Function(String error) error,
     required TResult Function(bool data) changeEmailMe,
     required TResult Function() addImage,
+    required TResult Function() deleteImage,
+    required TResult Function() uploadingImage,
+    required TResult Function() successAddImage,
+    required TResult Function(String error) errorUploadingImage,
   }) {
     return success(data);
   }
@@ -434,6 +510,10 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult? Function(String error)? error,
     TResult? Function(bool data)? changeEmailMe,
     TResult? Function()? addImage,
+    TResult? Function()? deleteImage,
+    TResult? Function()? uploadingImage,
+    TResult? Function()? successAddImage,
+    TResult? Function(String error)? errorUploadingImage,
   }) {
     return success?.call(data);
   }
@@ -447,6 +527,10 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult Function(String error)? error,
     TResult Function(bool data)? changeEmailMe,
     TResult Function()? addImage,
+    TResult Function()? deleteImage,
+    TResult Function()? uploadingImage,
+    TResult Function()? successAddImage,
+    TResult Function(String error)? errorUploadingImage,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -464,6 +548,10 @@ class _$SuccessImpl<T> implements Success<T> {
     required TResult Function(Error<T> value) error,
     required TResult Function(ChangeEmailMe<T> value) changeEmailMe,
     required TResult Function(addImage<T> value) addImage,
+    required TResult Function(deleteImage<T> value) deleteImage,
+    required TResult Function(UploadingImage<T> value) uploadingImage,
+    required TResult Function(SuccessAddImage<T> value) successAddImage,
+    required TResult Function(ErrorUploadingImage<T> value) errorUploadingImage,
   }) {
     return success(this);
   }
@@ -477,6 +565,10 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult? Function(Error<T> value)? error,
     TResult? Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult? Function(addImage<T> value)? addImage,
+    TResult? Function(deleteImage<T> value)? deleteImage,
+    TResult? Function(UploadingImage<T> value)? uploadingImage,
+    TResult? Function(SuccessAddImage<T> value)? successAddImage,
+    TResult? Function(ErrorUploadingImage<T> value)? errorUploadingImage,
   }) {
     return success?.call(this);
   }
@@ -490,6 +582,10 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult Function(Error<T> value)? error,
     TResult Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult Function(addImage<T> value)? addImage,
+    TResult Function(deleteImage<T> value)? deleteImage,
+    TResult Function(UploadingImage<T> value)? uploadingImage,
+    TResult Function(SuccessAddImage<T> value)? successAddImage,
+    TResult Function(ErrorUploadingImage<T> value)? errorUploadingImage,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -578,6 +674,10 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function(String error) error,
     required TResult Function(bool data) changeEmailMe,
     required TResult Function() addImage,
+    required TResult Function() deleteImage,
+    required TResult Function() uploadingImage,
+    required TResult Function() successAddImage,
+    required TResult Function(String error) errorUploadingImage,
   }) {
     return error(this.error);
   }
@@ -591,6 +691,10 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function(String error)? error,
     TResult? Function(bool data)? changeEmailMe,
     TResult? Function()? addImage,
+    TResult? Function()? deleteImage,
+    TResult? Function()? uploadingImage,
+    TResult? Function()? successAddImage,
+    TResult? Function(String error)? errorUploadingImage,
   }) {
     return error?.call(this.error);
   }
@@ -604,6 +708,10 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function(String error)? error,
     TResult Function(bool data)? changeEmailMe,
     TResult Function()? addImage,
+    TResult Function()? deleteImage,
+    TResult Function()? uploadingImage,
+    TResult Function()? successAddImage,
+    TResult Function(String error)? errorUploadingImage,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -621,6 +729,10 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function(Error<T> value) error,
     required TResult Function(ChangeEmailMe<T> value) changeEmailMe,
     required TResult Function(addImage<T> value) addImage,
+    required TResult Function(deleteImage<T> value) deleteImage,
+    required TResult Function(UploadingImage<T> value) uploadingImage,
+    required TResult Function(SuccessAddImage<T> value) successAddImage,
+    required TResult Function(ErrorUploadingImage<T> value) errorUploadingImage,
   }) {
     return error(this);
   }
@@ -634,6 +746,10 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function(Error<T> value)? error,
     TResult? Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult? Function(addImage<T> value)? addImage,
+    TResult? Function(deleteImage<T> value)? deleteImage,
+    TResult? Function(UploadingImage<T> value)? uploadingImage,
+    TResult? Function(SuccessAddImage<T> value)? successAddImage,
+    TResult? Function(ErrorUploadingImage<T> value)? errorUploadingImage,
   }) {
     return error?.call(this);
   }
@@ -647,6 +763,10 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function(Error<T> value)? error,
     TResult Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult Function(addImage<T> value)? addImage,
+    TResult Function(deleteImage<T> value)? deleteImage,
+    TResult Function(UploadingImage<T> value)? uploadingImage,
+    TResult Function(SuccessAddImage<T> value)? successAddImage,
+    TResult Function(ErrorUploadingImage<T> value)? errorUploadingImage,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -736,6 +856,10 @@ class _$ChangeEmailMeImpl<T> implements ChangeEmailMe<T> {
     required TResult Function(String error) error,
     required TResult Function(bool data) changeEmailMe,
     required TResult Function() addImage,
+    required TResult Function() deleteImage,
+    required TResult Function() uploadingImage,
+    required TResult Function() successAddImage,
+    required TResult Function(String error) errorUploadingImage,
   }) {
     return changeEmailMe(data);
   }
@@ -749,6 +873,10 @@ class _$ChangeEmailMeImpl<T> implements ChangeEmailMe<T> {
     TResult? Function(String error)? error,
     TResult? Function(bool data)? changeEmailMe,
     TResult? Function()? addImage,
+    TResult? Function()? deleteImage,
+    TResult? Function()? uploadingImage,
+    TResult? Function()? successAddImage,
+    TResult? Function(String error)? errorUploadingImage,
   }) {
     return changeEmailMe?.call(data);
   }
@@ -762,6 +890,10 @@ class _$ChangeEmailMeImpl<T> implements ChangeEmailMe<T> {
     TResult Function(String error)? error,
     TResult Function(bool data)? changeEmailMe,
     TResult Function()? addImage,
+    TResult Function()? deleteImage,
+    TResult Function()? uploadingImage,
+    TResult Function()? successAddImage,
+    TResult Function(String error)? errorUploadingImage,
     required TResult orElse(),
   }) {
     if (changeEmailMe != null) {
@@ -779,6 +911,10 @@ class _$ChangeEmailMeImpl<T> implements ChangeEmailMe<T> {
     required TResult Function(Error<T> value) error,
     required TResult Function(ChangeEmailMe<T> value) changeEmailMe,
     required TResult Function(addImage<T> value) addImage,
+    required TResult Function(deleteImage<T> value) deleteImage,
+    required TResult Function(UploadingImage<T> value) uploadingImage,
+    required TResult Function(SuccessAddImage<T> value) successAddImage,
+    required TResult Function(ErrorUploadingImage<T> value) errorUploadingImage,
   }) {
     return changeEmailMe(this);
   }
@@ -792,6 +928,10 @@ class _$ChangeEmailMeImpl<T> implements ChangeEmailMe<T> {
     TResult? Function(Error<T> value)? error,
     TResult? Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult? Function(addImage<T> value)? addImage,
+    TResult? Function(deleteImage<T> value)? deleteImage,
+    TResult? Function(UploadingImage<T> value)? uploadingImage,
+    TResult? Function(SuccessAddImage<T> value)? successAddImage,
+    TResult? Function(ErrorUploadingImage<T> value)? errorUploadingImage,
   }) {
     return changeEmailMe?.call(this);
   }
@@ -805,6 +945,10 @@ class _$ChangeEmailMeImpl<T> implements ChangeEmailMe<T> {
     TResult Function(Error<T> value)? error,
     TResult Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult Function(addImage<T> value)? addImage,
+    TResult Function(deleteImage<T> value)? deleteImage,
+    TResult Function(UploadingImage<T> value)? uploadingImage,
+    TResult Function(SuccessAddImage<T> value)? successAddImage,
+    TResult Function(ErrorUploadingImage<T> value)? errorUploadingImage,
     required TResult orElse(),
   }) {
     if (changeEmailMe != null) {
@@ -867,6 +1011,10 @@ class _$addImageImpl<T> implements addImage<T> {
     required TResult Function(String error) error,
     required TResult Function(bool data) changeEmailMe,
     required TResult Function() addImage,
+    required TResult Function() deleteImage,
+    required TResult Function() uploadingImage,
+    required TResult Function() successAddImage,
+    required TResult Function(String error) errorUploadingImage,
   }) {
     return addImage();
   }
@@ -880,6 +1028,10 @@ class _$addImageImpl<T> implements addImage<T> {
     TResult? Function(String error)? error,
     TResult? Function(bool data)? changeEmailMe,
     TResult? Function()? addImage,
+    TResult? Function()? deleteImage,
+    TResult? Function()? uploadingImage,
+    TResult? Function()? successAddImage,
+    TResult? Function(String error)? errorUploadingImage,
   }) {
     return addImage?.call();
   }
@@ -893,6 +1045,10 @@ class _$addImageImpl<T> implements addImage<T> {
     TResult Function(String error)? error,
     TResult Function(bool data)? changeEmailMe,
     TResult Function()? addImage,
+    TResult Function()? deleteImage,
+    TResult Function()? uploadingImage,
+    TResult Function()? successAddImage,
+    TResult Function(String error)? errorUploadingImage,
     required TResult orElse(),
   }) {
     if (addImage != null) {
@@ -910,6 +1066,10 @@ class _$addImageImpl<T> implements addImage<T> {
     required TResult Function(Error<T> value) error,
     required TResult Function(ChangeEmailMe<T> value) changeEmailMe,
     required TResult Function(addImage<T> value) addImage,
+    required TResult Function(deleteImage<T> value) deleteImage,
+    required TResult Function(UploadingImage<T> value) uploadingImage,
+    required TResult Function(SuccessAddImage<T> value) successAddImage,
+    required TResult Function(ErrorUploadingImage<T> value) errorUploadingImage,
   }) {
     return addImage(this);
   }
@@ -923,6 +1083,10 @@ class _$addImageImpl<T> implements addImage<T> {
     TResult? Function(Error<T> value)? error,
     TResult? Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult? Function(addImage<T> value)? addImage,
+    TResult? Function(deleteImage<T> value)? deleteImage,
+    TResult? Function(UploadingImage<T> value)? uploadingImage,
+    TResult? Function(SuccessAddImage<T> value)? successAddImage,
+    TResult? Function(ErrorUploadingImage<T> value)? errorUploadingImage,
   }) {
     return addImage?.call(this);
   }
@@ -936,6 +1100,10 @@ class _$addImageImpl<T> implements addImage<T> {
     TResult Function(Error<T> value)? error,
     TResult Function(ChangeEmailMe<T> value)? changeEmailMe,
     TResult Function(addImage<T> value)? addImage,
+    TResult Function(deleteImage<T> value)? deleteImage,
+    TResult Function(UploadingImage<T> value)? uploadingImage,
+    TResult Function(SuccessAddImage<T> value)? successAddImage,
+    TResult Function(ErrorUploadingImage<T> value)? errorUploadingImage,
     required TResult orElse(),
   }) {
     if (addImage != null) {
@@ -947,4 +1115,637 @@ class _$addImageImpl<T> implements addImage<T> {
 
 abstract class addImage<T> implements SignUpState<T> {
   const factory addImage() = _$addImageImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$deleteImageImplCopyWith<T, $Res> {
+  factory _$$deleteImageImplCopyWith(_$deleteImageImpl<T> value,
+          $Res Function(_$deleteImageImpl<T>) then) =
+      __$$deleteImageImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$deleteImageImplCopyWithImpl<T, $Res>
+    extends _$SignUpStateCopyWithImpl<T, $Res, _$deleteImageImpl<T>>
+    implements _$$deleteImageImplCopyWith<T, $Res> {
+  __$$deleteImageImplCopyWithImpl(
+      _$deleteImageImpl<T> _value, $Res Function(_$deleteImageImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$deleteImageImpl<T> implements deleteImage<T> {
+  const _$deleteImageImpl();
+
+  @override
+  String toString() {
+    return 'SignUpState<$T>.deleteImage()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$deleteImageImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
+    required TResult Function(bool data) changeEmailMe,
+    required TResult Function() addImage,
+    required TResult Function() deleteImage,
+    required TResult Function() uploadingImage,
+    required TResult Function() successAddImage,
+    required TResult Function(String error) errorUploadingImage,
+  }) {
+    return deleteImage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
+    TResult? Function(bool data)? changeEmailMe,
+    TResult? Function()? addImage,
+    TResult? Function()? deleteImage,
+    TResult? Function()? uploadingImage,
+    TResult? Function()? successAddImage,
+    TResult? Function(String error)? errorUploadingImage,
+  }) {
+    return deleteImage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
+    TResult Function(bool data)? changeEmailMe,
+    TResult Function()? addImage,
+    TResult Function()? deleteImage,
+    TResult Function()? uploadingImage,
+    TResult Function()? successAddImage,
+    TResult Function(String error)? errorUploadingImage,
+    required TResult orElse(),
+  }) {
+    if (deleteImage != null) {
+      return deleteImage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(ChangeEmailMe<T> value) changeEmailMe,
+    required TResult Function(addImage<T> value) addImage,
+    required TResult Function(deleteImage<T> value) deleteImage,
+    required TResult Function(UploadingImage<T> value) uploadingImage,
+    required TResult Function(SuccessAddImage<T> value) successAddImage,
+    required TResult Function(ErrorUploadingImage<T> value) errorUploadingImage,
+  }) {
+    return deleteImage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(ChangeEmailMe<T> value)? changeEmailMe,
+    TResult? Function(addImage<T> value)? addImage,
+    TResult? Function(deleteImage<T> value)? deleteImage,
+    TResult? Function(UploadingImage<T> value)? uploadingImage,
+    TResult? Function(SuccessAddImage<T> value)? successAddImage,
+    TResult? Function(ErrorUploadingImage<T> value)? errorUploadingImage,
+  }) {
+    return deleteImage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(ChangeEmailMe<T> value)? changeEmailMe,
+    TResult Function(addImage<T> value)? addImage,
+    TResult Function(deleteImage<T> value)? deleteImage,
+    TResult Function(UploadingImage<T> value)? uploadingImage,
+    TResult Function(SuccessAddImage<T> value)? successAddImage,
+    TResult Function(ErrorUploadingImage<T> value)? errorUploadingImage,
+    required TResult orElse(),
+  }) {
+    if (deleteImage != null) {
+      return deleteImage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class deleteImage<T> implements SignUpState<T> {
+  const factory deleteImage() = _$deleteImageImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$UploadingImageImplCopyWith<T, $Res> {
+  factory _$$UploadingImageImplCopyWith(_$UploadingImageImpl<T> value,
+          $Res Function(_$UploadingImageImpl<T>) then) =
+      __$$UploadingImageImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$UploadingImageImplCopyWithImpl<T, $Res>
+    extends _$SignUpStateCopyWithImpl<T, $Res, _$UploadingImageImpl<T>>
+    implements _$$UploadingImageImplCopyWith<T, $Res> {
+  __$$UploadingImageImplCopyWithImpl(_$UploadingImageImpl<T> _value,
+      $Res Function(_$UploadingImageImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadingImageImpl<T> implements UploadingImage<T> {
+  const _$UploadingImageImpl();
+
+  @override
+  String toString() {
+    return 'SignUpState<$T>.uploadingImage()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UploadingImageImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
+    required TResult Function(bool data) changeEmailMe,
+    required TResult Function() addImage,
+    required TResult Function() deleteImage,
+    required TResult Function() uploadingImage,
+    required TResult Function() successAddImage,
+    required TResult Function(String error) errorUploadingImage,
+  }) {
+    return uploadingImage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
+    TResult? Function(bool data)? changeEmailMe,
+    TResult? Function()? addImage,
+    TResult? Function()? deleteImage,
+    TResult? Function()? uploadingImage,
+    TResult? Function()? successAddImage,
+    TResult? Function(String error)? errorUploadingImage,
+  }) {
+    return uploadingImage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
+    TResult Function(bool data)? changeEmailMe,
+    TResult Function()? addImage,
+    TResult Function()? deleteImage,
+    TResult Function()? uploadingImage,
+    TResult Function()? successAddImage,
+    TResult Function(String error)? errorUploadingImage,
+    required TResult orElse(),
+  }) {
+    if (uploadingImage != null) {
+      return uploadingImage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(ChangeEmailMe<T> value) changeEmailMe,
+    required TResult Function(addImage<T> value) addImage,
+    required TResult Function(deleteImage<T> value) deleteImage,
+    required TResult Function(UploadingImage<T> value) uploadingImage,
+    required TResult Function(SuccessAddImage<T> value) successAddImage,
+    required TResult Function(ErrorUploadingImage<T> value) errorUploadingImage,
+  }) {
+    return uploadingImage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(ChangeEmailMe<T> value)? changeEmailMe,
+    TResult? Function(addImage<T> value)? addImage,
+    TResult? Function(deleteImage<T> value)? deleteImage,
+    TResult? Function(UploadingImage<T> value)? uploadingImage,
+    TResult? Function(SuccessAddImage<T> value)? successAddImage,
+    TResult? Function(ErrorUploadingImage<T> value)? errorUploadingImage,
+  }) {
+    return uploadingImage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(ChangeEmailMe<T> value)? changeEmailMe,
+    TResult Function(addImage<T> value)? addImage,
+    TResult Function(deleteImage<T> value)? deleteImage,
+    TResult Function(UploadingImage<T> value)? uploadingImage,
+    TResult Function(SuccessAddImage<T> value)? successAddImage,
+    TResult Function(ErrorUploadingImage<T> value)? errorUploadingImage,
+    required TResult orElse(),
+  }) {
+    if (uploadingImage != null) {
+      return uploadingImage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UploadingImage<T> implements SignUpState<T> {
+  const factory UploadingImage() = _$UploadingImageImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$SuccessAddImageImplCopyWith<T, $Res> {
+  factory _$$SuccessAddImageImplCopyWith(_$SuccessAddImageImpl<T> value,
+          $Res Function(_$SuccessAddImageImpl<T>) then) =
+      __$$SuccessAddImageImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$SuccessAddImageImplCopyWithImpl<T, $Res>
+    extends _$SignUpStateCopyWithImpl<T, $Res, _$SuccessAddImageImpl<T>>
+    implements _$$SuccessAddImageImplCopyWith<T, $Res> {
+  __$$SuccessAddImageImplCopyWithImpl(_$SuccessAddImageImpl<T> _value,
+      $Res Function(_$SuccessAddImageImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SuccessAddImageImpl<T> implements SuccessAddImage<T> {
+  const _$SuccessAddImageImpl();
+
+  @override
+  String toString() {
+    return 'SignUpState<$T>.successAddImage()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SuccessAddImageImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
+    required TResult Function(bool data) changeEmailMe,
+    required TResult Function() addImage,
+    required TResult Function() deleteImage,
+    required TResult Function() uploadingImage,
+    required TResult Function() successAddImage,
+    required TResult Function(String error) errorUploadingImage,
+  }) {
+    return successAddImage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
+    TResult? Function(bool data)? changeEmailMe,
+    TResult? Function()? addImage,
+    TResult? Function()? deleteImage,
+    TResult? Function()? uploadingImage,
+    TResult? Function()? successAddImage,
+    TResult? Function(String error)? errorUploadingImage,
+  }) {
+    return successAddImage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
+    TResult Function(bool data)? changeEmailMe,
+    TResult Function()? addImage,
+    TResult Function()? deleteImage,
+    TResult Function()? uploadingImage,
+    TResult Function()? successAddImage,
+    TResult Function(String error)? errorUploadingImage,
+    required TResult orElse(),
+  }) {
+    if (successAddImage != null) {
+      return successAddImage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(ChangeEmailMe<T> value) changeEmailMe,
+    required TResult Function(addImage<T> value) addImage,
+    required TResult Function(deleteImage<T> value) deleteImage,
+    required TResult Function(UploadingImage<T> value) uploadingImage,
+    required TResult Function(SuccessAddImage<T> value) successAddImage,
+    required TResult Function(ErrorUploadingImage<T> value) errorUploadingImage,
+  }) {
+    return successAddImage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(ChangeEmailMe<T> value)? changeEmailMe,
+    TResult? Function(addImage<T> value)? addImage,
+    TResult? Function(deleteImage<T> value)? deleteImage,
+    TResult? Function(UploadingImage<T> value)? uploadingImage,
+    TResult? Function(SuccessAddImage<T> value)? successAddImage,
+    TResult? Function(ErrorUploadingImage<T> value)? errorUploadingImage,
+  }) {
+    return successAddImage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(ChangeEmailMe<T> value)? changeEmailMe,
+    TResult Function(addImage<T> value)? addImage,
+    TResult Function(deleteImage<T> value)? deleteImage,
+    TResult Function(UploadingImage<T> value)? uploadingImage,
+    TResult Function(SuccessAddImage<T> value)? successAddImage,
+    TResult Function(ErrorUploadingImage<T> value)? errorUploadingImage,
+    required TResult orElse(),
+  }) {
+    if (successAddImage != null) {
+      return successAddImage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SuccessAddImage<T> implements SignUpState<T> {
+  const factory SuccessAddImage() = _$SuccessAddImageImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$ErrorUploadingImageImplCopyWith<T, $Res> {
+  factory _$$ErrorUploadingImageImplCopyWith(_$ErrorUploadingImageImpl<T> value,
+          $Res Function(_$ErrorUploadingImageImpl<T>) then) =
+      __$$ErrorUploadingImageImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$ErrorUploadingImageImplCopyWithImpl<T, $Res>
+    extends _$SignUpStateCopyWithImpl<T, $Res, _$ErrorUploadingImageImpl<T>>
+    implements _$$ErrorUploadingImageImplCopyWith<T, $Res> {
+  __$$ErrorUploadingImageImplCopyWithImpl(_$ErrorUploadingImageImpl<T> _value,
+      $Res Function(_$ErrorUploadingImageImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$ErrorUploadingImageImpl<T>(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ErrorUploadingImageImpl<T> implements ErrorUploadingImage<T> {
+  const _$ErrorUploadingImageImpl({required this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'SignUpState<$T>.errorUploadingImage(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorUploadingImageImpl<T> &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErrorUploadingImageImplCopyWith<T, _$ErrorUploadingImageImpl<T>>
+      get copyWith => __$$ErrorUploadingImageImplCopyWithImpl<T,
+          _$ErrorUploadingImageImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
+    required TResult Function(bool data) changeEmailMe,
+    required TResult Function() addImage,
+    required TResult Function() deleteImage,
+    required TResult Function() uploadingImage,
+    required TResult Function() successAddImage,
+    required TResult Function(String error) errorUploadingImage,
+  }) {
+    return errorUploadingImage(this.error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
+    TResult? Function(bool data)? changeEmailMe,
+    TResult? Function()? addImage,
+    TResult? Function()? deleteImage,
+    TResult? Function()? uploadingImage,
+    TResult? Function()? successAddImage,
+    TResult? Function(String error)? errorUploadingImage,
+  }) {
+    return errorUploadingImage?.call(this.error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
+    TResult Function(bool data)? changeEmailMe,
+    TResult Function()? addImage,
+    TResult Function()? deleteImage,
+    TResult Function()? uploadingImage,
+    TResult Function()? successAddImage,
+    TResult Function(String error)? errorUploadingImage,
+    required TResult orElse(),
+  }) {
+    if (errorUploadingImage != null) {
+      return errorUploadingImage(this.error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(ChangeEmailMe<T> value) changeEmailMe,
+    required TResult Function(addImage<T> value) addImage,
+    required TResult Function(deleteImage<T> value) deleteImage,
+    required TResult Function(UploadingImage<T> value) uploadingImage,
+    required TResult Function(SuccessAddImage<T> value) successAddImage,
+    required TResult Function(ErrorUploadingImage<T> value) errorUploadingImage,
+  }) {
+    return errorUploadingImage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(ChangeEmailMe<T> value)? changeEmailMe,
+    TResult? Function(addImage<T> value)? addImage,
+    TResult? Function(deleteImage<T> value)? deleteImage,
+    TResult? Function(UploadingImage<T> value)? uploadingImage,
+    TResult? Function(SuccessAddImage<T> value)? successAddImage,
+    TResult? Function(ErrorUploadingImage<T> value)? errorUploadingImage,
+  }) {
+    return errorUploadingImage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(ChangeEmailMe<T> value)? changeEmailMe,
+    TResult Function(addImage<T> value)? addImage,
+    TResult Function(deleteImage<T> value)? deleteImage,
+    TResult Function(UploadingImage<T> value)? uploadingImage,
+    TResult Function(SuccessAddImage<T> value)? successAddImage,
+    TResult Function(ErrorUploadingImage<T> value)? errorUploadingImage,
+    required TResult orElse(),
+  }) {
+    if (errorUploadingImage != null) {
+      return errorUploadingImage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ErrorUploadingImage<T> implements SignUpState<T> {
+  const factory ErrorUploadingImage({required final String error}) =
+      _$ErrorUploadingImageImpl<T>;
+
+  String get error;
+  @JsonKey(ignore: true)
+  _$$ErrorUploadingImageImplCopyWith<T, _$ErrorUploadingImageImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }

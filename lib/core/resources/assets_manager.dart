@@ -23,7 +23,19 @@ class ImageAssets {
   static const String visa = "$imagePath/visa.svg";
   static const String payoneer = "$imagePath/Payoneer.svg";
   static const String cameraIcon = "$imagePath/CameraIcon.svg";
-    static const String galleryIcon = "$imagePath/GalleryIcon.svg";
+  static const String galleryIcon = "$imagePath/GalleryIcon.svg";
+  static const String closeIcon = "$imagePath/closeIcon.svg";
+  static const String done = "$imagePath/done.svg";
+  static const String home = "$imagePath/home.svg";
+  static const String chat = "$imagePath/chat.svg";
+  static const String buy = "$imagePath/buy.svg";
+  static const String iconNotification = "$imagePath/Icon_notification.svg";
+  static String filterIcon =
+      isItDark() ? "$imagePath/FilterDark.svg" : "$imagePath/FilterLight.svg";
+
+  static String iconSearch = isItDark()
+      ? "$imagePath/IconSearchDark.svg"
+      : "$imagePath/IconSearchLight.svg";
 }
 
 class JsonAssets {}

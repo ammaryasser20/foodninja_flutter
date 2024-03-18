@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:foodninja/features/onboarding/data/models/models.dart';
 
 import 'package:foodninja/main.dart';
@@ -14,7 +15,11 @@ part 'onboarding_state.dart';
 class OnboardingCubit extends Cubit<OnboardingState> {
   OnboardingCubit() : super(OnboardingInitial());
   static OnboardingCubit get(context) => BlocProvider.of(context);
+// Future<void> darkMode(bool dark) async {
+//     await CashHelper.putBool(key: Keys.darkMode, value: dark);
 
+//     emit( Ca());
+//   }
   List<SliderObject> getSliderData(BuildContext context) => [
         SliderObject(AppStrings.onboardingTitleOne,
             AppStrings.onboardingSubTitleOne, ImageAssets.onboarding1),

@@ -24,6 +24,9 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
+        "buy": MessageLookupByLibrary.simpleMessage("شراء"),
+        "chat": MessageLookupByLibrary.simpleMessage("محادثة"),
+        "congrats": MessageLookupByLibrary.simpleMessage("مبروك!"),
         "createAccount": MessageLookupByLibrary.simpleMessage("أنشاء حساب"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "emailAndPasswordInvalid": MessageLookupByLibrary.simpleMessage(
@@ -34,6 +37,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمه المرور؟"),
         "haveNotAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك جساب؟"),
+        "hintSearchTextFormFile":
+            MessageLookupByLibrary.simpleMessage("ما الذي ترغب في طلبه؟"),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+        "homeScreenTitle":
+            MessageLookupByLibrary.simpleMessage("ابحث عن \nطعامك المفضل"),
         "invalidEmail":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني  غير صالح"),
         "invalidPassword": MessageLookupByLibrary.simpleMessage(
@@ -58,16 +66,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "orContinueWith": MessageLookupByLibrary.simpleMessage("او الدخول ب"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "paymentMethod": MessageLookupByLibrary.simpleMessage("طر يقة الدفع"),
+        "profile": MessageLookupByLibrary.simpleMessage("صفحتك"),
         "signUpScreenTitle":
-            MessageLookupByLibrary.simpleMessage("أنشاء جساب مجانى"),
+            MessageLookupByLibrary.simpleMessage("أنشاء حساب مجانى"),
         "supTitleOfSignUpProcess": MessageLookupByLibrary.simpleMessage(
             "سيتم عرض هذه البيانات في ملف تعريف حسابك للحماية"),
         "theEmailHasAlreadyBeenTaken":
             MessageLookupByLibrary.simpleMessage("هذا البريد مستخدم بالفعل"),
         "theEmailOrPasswordIsIncorrect": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني أو كلمة المرور غير صحيحة"),
+        "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا"),
         "uploadYourPhotoProfile": MessageLookupByLibrary.simpleMessage(
             "قم بتحميل الصورة الخاصة بملفك الشخصى"),
-        "userName": MessageLookupByLibrary.simpleMessage("ضع اسمك")
+        "userName": MessageLookupByLibrary.simpleMessage("ضع اسمك"),
+        "yourProfileIsReadyToUse":
+            MessageLookupByLibrary.simpleMessage("ملفك الشخصي جاهز للاستخدام")
       };
 }
