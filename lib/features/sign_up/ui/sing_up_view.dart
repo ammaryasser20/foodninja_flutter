@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:foodninja/features/manger/cubit/manger_cubit.dart';
+import 'package:foodninja/features/onboarding/logic/onboarding_cubit.dart';
 import 'package:foodninja/features/sign_up/data/models/register_request_body.dart';
 import 'package:foodninja/features/sign_up/logic/signup_cubit.dart';
 import 'package:foodninja/features/sign_up/logic/signup_state.dart';
@@ -49,8 +51,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
             children: [
               Stack(
                 children: [
-                  Opacity(
-                    opacity: .7,
+                  Container(
+                    foregroundDecoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: isItDark()
+                            ? [
+                                ColorManager.dark.withOpacity(.8),
+                                ColorManager.dark.withOpacity(0.0)
+                              ]
+                            : [
+                                ColorManager.white.withOpacity(.8),
+                                ColorManager.white.withOpacity(0.0)
+                              ],
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topCenter,
+                      ),
+                    ),
                     child: SvgPicture.asset(
                       ImageAssets.pattern,
                       width: 100.w,

@@ -329,6 +329,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Congrats!`
+  String get congrats {
+    return Intl.message(
+      'Congrats!',
+      name: 'congrats',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Profile Is Ready To Use`
+  String get yourProfileIsReadyToUse {
+    return Intl.message(
+      'Your Profile Is Ready To Use',
+      name: 'yourProfileIsReadyToUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try again`
+  String get tryAgain {
+    return Intl.message(
+      'Try again',
+      name: 'tryAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Buy`
+  String get buy {
+    return Intl.message(
+      'Buy',
+      name: 'buy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chat`
+  String get chat {
+    return Intl.message(
+      'Chat',
+      name: 'chat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Find Your\nFavorite Food`
+  String get homeScreenTitle {
+    return Intl.message(
+      'Find Your\nFavorite Food',
+      name: 'homeScreenTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What do you want to order?`
+  String get hintSearchTextFormFile {
+    return Intl.message(
+      'What do you want to order?',
+      name: 'hintSearchTextFormFile',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

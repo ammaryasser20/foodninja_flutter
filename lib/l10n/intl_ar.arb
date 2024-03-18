@@ -10,7 +10,7 @@
     "orContinueWith":"او الدخول ب",
     "forgotYourPassword":"هل نسيت كلمه المرور؟",
     "login":"تسجيل الدخول",
-    "signUpScreenTitle":"أنشاء جساب مجانى",
+    "signUpScreenTitle":"أنشاء حساب مجانى",
     "userName":"ضع اسمك",
     "createAccount":"أنشاء حساب",
     "keepMeSignedIn":"ابقني مسجل",
@@ -26,6 +26,15 @@
     "noInternetConnection":"لا يوجد اتصال بالإنترنت",
     "paymentMethod":"طر يقة الدفع",
     "supTitleOfSignUpProcess":"سيتم عرض هذه البيانات في ملف تعريف حسابك للحماية",
-    "uploadYourPhotoProfile":"قم بتحميل الصورة الخاصة بملفك الشخصى"
+    "uploadYourPhotoProfile":"قم بتحميل الصورة الخاصة بملفك الشخصى",
+    "congrats":"مبروك!",
+    "yourProfileIsReadyToUse":"ملفك الشخصي جاهز للاستخدام",
+    "tryAgain": "حاول مجددا",
+    "home": "الرئيسية",
+    "profile":"صفحتك",
+    "buy": "شراء",
+    "chat": "محادثة",
+    "homeScreenTitle": "ابحث عن \nطعامك المفضل",
+    "hintSearchTextFormFile": "ما الذي ترغب في طلبه؟"
     
 }

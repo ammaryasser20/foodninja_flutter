@@ -1,8 +1,10 @@
-import 'dart:io';
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:foodninja/core/resources/assets_manager.dart';
+
 import 'package:foodninja/core/resources/font_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
 import 'package:foodninja/features/sign_up/logic/signup_cubit.dart';
@@ -43,9 +45,8 @@ class UploadPhoto extends StatelessWidget {
           ),
           BlocBuilder<SignUpCubit, SignUpState>(
             builder: (context, state) {
-              return Visibility(
-                visible: context.read<SignUpCubit>().userImage != null,
-                replacement: Column(
+              if (context.read<SignUpCubit>().userImage == null) {
+                return Column(
                   children: [
                     GetImageItem(
                       function: () async {
@@ -67,11 +68,37 @@ class UploadPhoto extends StatelessWidget {
                       image: ImageAssets.cameraIcon,
                     )
                   ],
-                ),
-                child: context.read<SignUpCubit>().userImage != null
-                    ? Image.file(context.read<SignUpCubit>().userImage!)
-                    : Container(),
-              );
+                );
+              } else {
+                return Padding(
+                  padding: EdgeInsets.only(top: 10.h),
+                  child: Center(
+                    child: Container(
+                      height: 25.h,
+                      clipBehavior: Clip.hardEdge,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25)),
+                      child: Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          Image.file(
+                            context.read<SignUpCubit>().userImage!,
+                          ),
+                          IconButton(
+                              onPressed: () {
+                                context.read<SignUpCubit>().deleteImage();
+                              },
+                              icon: SvgPicture.asset(
+                                width: 40,
+                                height: 40,
+                                ImageAssets.closeIcon,
+                              ))
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+              }
             },
           )
         ],

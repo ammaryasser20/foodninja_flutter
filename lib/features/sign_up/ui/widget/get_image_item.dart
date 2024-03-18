@@ -16,8 +16,8 @@ class GetImageItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        function();
+      onTap: () async {
+        await function();
       },
       child: Container(
         width: 90.w,

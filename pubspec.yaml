@@ -64,6 +64,7 @@ dependencies:
   path: ^1.9.0
   image_cropper: ^5.0.1
   permission_handler: ^11.3.0
+  google_nav_bar: ^5.0.6
  
 
 
@@ -112,7 +113,8 @@ flutter:
         - asset: assets/font/BentonSans Regular.otf
     - family: BentonSans Medium
       fonts:
-        - asset: assets/font/BentonSans Medium.otf   
+        - asset: assets/font/BentonSans Medium.otf
+    
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

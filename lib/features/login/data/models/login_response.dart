@@ -11,7 +11,13 @@ class LoginResponse {
 
   factory LoginResponse.fromJson(Map<String, dynamic> json) =>
       _$LoginResponseFromJson(json);
-  Map<String, dynamic> loginResponseToJson() => _$LoginResponseToJson(this);
+  Map<String, dynamic> loginResponseToJson() {
+    return <String, dynamic>{
+      'user': user!.userToJson(),
+      'token': token,
+      'status': status,
+    };
+  }
 }
 
 @JsonSerializable()
@@ -24,7 +30,7 @@ class User {
   String? emailVerifiedAt;
   String? otp;
   String? avatar;
-   @JsonKey(name: "updated_at")
+  @JsonKey(name: "updated_at")
   String? updatedAt;
   @JsonKey(name: "created_at")
   String? createdAt;
