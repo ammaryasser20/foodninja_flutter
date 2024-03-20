@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("already have an account?"),
         "buy": MessageLookupByLibrary.simpleMessage("Buy"),
+        "buyNow": MessageLookupByLibrary.simpleMessage("Buy now"),
         "chat": MessageLookupByLibrary.simpleMessage("Chat"),
         "congrats": MessageLookupByLibrary.simpleMessage("Congrats!"),
         "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
@@ -67,9 +68,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Or Continue With"),
         "password": MessageLookupByLibrary.simpleMessage("password"),
         "paymentMethod": MessageLookupByLibrary.simpleMessage("Payment Method"),
+        "popularMenus": MessageLookupByLibrary.simpleMessage("Popular Menus"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "restaurant": MessageLookupByLibrary.simpleMessage("Restaurants"),
         "signUpScreenTitle":
             MessageLookupByLibrary.simpleMessage("Sign Up For Free"),
+        "specialDeal":
+            MessageLookupByLibrary.simpleMessage("Special Deal\nFor Today"),
         "supTitleOfSignUpProcess": MessageLookupByLibrary.simpleMessage(
             "This data will be displayed in your account\nprofile for security"),
         "theEmailHasAlreadyBeenTaken": MessageLookupByLibrary.simpleMessage(
@@ -80,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "uploadYourPhotoProfile":
             MessageLookupByLibrary.simpleMessage("Upload Your Photo\nProfile"),
         "userName": MessageLookupByLibrary.simpleMessage("user name"),
+        "viewMore": MessageLookupByLibrary.simpleMessage("View More"),
         "yourProfileIsReadyToUse":
             MessageLookupByLibrary.simpleMessage("Your Profile Is Ready To Use")
       };

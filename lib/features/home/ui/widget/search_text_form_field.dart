@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/main.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SearchTextFormField extends StatefulWidget {
   const SearchTextFormField({
@@ -11,8 +10,8 @@ class SearchTextFormField extends StatefulWidget {
     required this.wight,
     required this.hight,
     required this.fillColor,
-    required this.controller,
     required this.cursorColor,
+    this.controller,
     this.readOnly = false,
     this.prefix,
     this.onTab,
@@ -27,7 +26,7 @@ class SearchTextFormField extends StatefulWidget {
   final bool readOnly;
   final Color fillColor;
   final Color cursorColor;
-  final TextEditingController controller;
+  final TextEditingController? controller;
   @override
   State<SearchTextFormField> createState() => _SearchTextFormFieldState();
 }

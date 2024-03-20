@@ -1,6 +1,5 @@
 import 'dart:async';
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:foodninja/core/local_DB/cash_helper.dart';
@@ -70,7 +69,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ImageAssets.pattern,
               ),
             ),
-            Logo(),
+            const Logo(),
           ],
         ),
       ),

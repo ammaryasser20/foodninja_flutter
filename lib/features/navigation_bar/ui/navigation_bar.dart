@@ -32,101 +32,98 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
     return BlocBuilder<NavigationCubit, NavigationState>(
       builder: (context, state) {
         return Scaffold(
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerDocked,
           extendBody: true,
           body: PageView(
             controller: controller,
             physics: const NeverScrollableScrollPhysics(),
             children: screens,
           ),
-          bottomNavigationBar: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-              padding: const EdgeInsets.all(15),
-              clipBehavior: Clip.hardEdge,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: isItDark()
-                        ? ColorManager.darkShadow.withOpacity(.1)
-                        : ColorManager.whiteShadow.withOpacity(.1),
-                    //   offset: const Offset(12, 26),
-                    blurRadius: 50,
-                  )
-                ],
-                color: isItDark() ? ColorManager.liteGray : ColorManager.white,
-                borderRadius: BorderRadius.circular(22),
-              ),
-              child: GNav(
-                gap: 10,
-                tabBorderRadius: 12,
-                padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 1.5.h),
-                tabBackgroundGradient: LinearGradient(colors: [
-                  ColorManager.primaryColor.withOpacity(.1),
-                  ColorManager.primaryColorLight.withOpacity(.1)
-                ]),
-                backgroundColor:
-                    isItDark() ? ColorManager.liteGray : ColorManager.white,
-                onTabChange: (value) {
-                  NavigationCubit.get(context).changeIndex(newIndex: value);
-                  controller.animateToPage(value,
-                      duration: const Duration(milliseconds: 500),
-                      curve: Curves.ease);
-                },
-                tabs: [
-                  GButton(
-                    textStyle: Theme.of(context)
-                        .textTheme
-                        .displaySmall!
-                        .copyWith(fontFamily: FontFamilies.bentonSansMedium),
-                    icon: Icons.home,
-                    text: AppStrings.home,
-                    leading: Opacity(
-                        opacity:
-                            NavigationCubit.get(context).index == 0 ? 1 : .5,
-                        child: SvgPicture.asset(ImageAssets.home,
-                            width: 25, height: 25)),
+          floatingActionButton: Container(
+            margin: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.h),
+            padding: const EdgeInsets.all(15),
+            clipBehavior: Clip.hardEdge,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: isItDark()
+                      ? ColorManager.darkShadow.withOpacity(.1)
+                      : ColorManager.whiteShadow.withOpacity(.1),
+                  blurRadius: 50,
+                )
+              ],
+              color: isItDark() ? ColorManager.liteGray : ColorManager.white,
+              borderRadius: BorderRadius.circular(22),
+            ),
+            child: GNav(
+              gap: 10,
+              tabBorderRadius: 12,
+              padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 1.5.h),
+              tabBackgroundGradient: LinearGradient(colors: [
+                ColorManager.primaryColor.withOpacity(.1),
+                ColorManager.primaryColorLight.withOpacity(.1)
+              ]),
+              backgroundColor:
+                  isItDark() ? ColorManager.liteGray : ColorManager.white,
+              onTabChange: (value) {
+                NavigationCubit.get(context).changeIndex(newIndex: value);
+                controller.animateToPage(value,
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.ease);
+              },
+              tabs: [
+                GButton(
+                  textStyle: Theme.of(context)
+                      .textTheme
+                      .displaySmall!
+                      .copyWith(fontFamily: FontFamilies.bentonSansMedium),
+                  icon: Icons.home,
+                  text: AppStrings.home,
+                  leading: Opacity(
+                      opacity: NavigationCubit.get(context).index == 0 ? 1 : .5,
+                      child: SvgPicture.asset(ImageAssets.home,
+                          width: 25, height: 25)),
+                ),
+                GButton(
+                  textStyle: Theme.of(context)
+                      .textTheme
+                      .displaySmall!
+                      .copyWith(fontFamily: FontFamilies.bentonSansMedium),
+                  icon: Icons.home,
+                  text: AppStrings.profile,
+                  leading: Opacity(
+                    opacity: NavigationCubit.get(context).index == 1 ? 1 : .5,
+                    child: SvgPicture.asset(ImageAssets.profile,
+                        width: 25, height: 25),
                   ),
-                  GButton(
-                    textStyle: Theme.of(context)
-                        .textTheme
-                        .displaySmall!
-                        .copyWith(fontFamily: FontFamilies.bentonSansMedium),
-                    icon: Icons.home,
-                    text: AppStrings.profile,
-                    leading: Opacity(
-                      opacity: NavigationCubit.get(context).index == 1 ? 1 : .5,
-                      child: SvgPicture.asset(ImageAssets.profile,
-                          width: 25, height: 25),
-                    ),
+                ),
+                GButton(
+                  textStyle: Theme.of(context)
+                      .textTheme
+                      .displaySmall!
+                      .copyWith(fontFamily: FontFamilies.bentonSansMedium),
+                  icon: Icons.abc,
+                  text: AppStrings.buy,
+                  leading: Opacity(
+                      opacity: NavigationCubit.get(context).index == 2 ? 1 : .5,
+                      child: SvgPicture.asset(ImageAssets.buy,
+                          width: 25, height: 25)),
+                ),
+                GButton(
+                  textStyle: Theme.of(context)
+                      .textTheme
+                      .displaySmall!
+                      .copyWith(fontFamily: FontFamilies.bentonSansMedium),
+                  icon: Icons.abc,
+                  text: AppStrings.chat,
+                  leading: Opacity(
+                    opacity: NavigationCubit.get(context).index == 3 ? 1 : .5,
+                    child: SvgPicture.asset(ImageAssets.chat,
+                        width: 25, height: 25),
                   ),
-                  GButton(
-                    textStyle: Theme.of(context)
-                        .textTheme
-                        .displaySmall!
-                        .copyWith(fontFamily: FontFamilies.bentonSansMedium),
-                    icon: Icons.abc,
-                    text: AppStrings.buy,
-                    leading: Opacity(
-                        opacity:
-                            NavigationCubit.get(context).index == 2 ? 1 : .5,
-                        child: SvgPicture.asset(ImageAssets.buy,
-                            width: 25, height: 25)),
-                  ),
-                  GButton(
-                    textStyle: Theme.of(context)
-                        .textTheme
-                        .displaySmall!
-                        .copyWith(fontFamily: FontFamilies.bentonSansMedium),
-                    icon: Icons.abc,
-                    text: AppStrings.chat,
-                    leading: Opacity(
-                        opacity:
-                            NavigationCubit.get(context).index == 3 ? 1 : .5,
-                        child: SvgPicture.asset(ImageAssets.chat,
-                            width: 25, height: 25)),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
           ),
         );

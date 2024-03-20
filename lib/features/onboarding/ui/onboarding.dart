@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:foodninja/core/local_DB/cash_helper.dart';
 import 'package:foodninja/features/onboarding/data/models/models.dart';
@@ -27,7 +28,7 @@ class _OnboardingState extends State<Onboarding> {
   @override
   void initState() {
     sliderObjectList =
-        OnboardingCubit.get(NavigationService.navigatorKey.currentContext)
+        context.read<OnboardingCubit>()
             .getSliderData(NavigationService.navigatorKey.currentContext!);
     CashHelper.putBool(key: Keys.notFirstTime, value: true);
 
@@ -78,7 +79,8 @@ class _OnboardingState extends State<Onboarding> {
             ),
             DefaultBottom(
               onPressed: () {
-                OnboardingCubit.get(context).nextBottom(_pageController);
+              context.read<OnboardingCubit>()
+            .nextBottom(_pageController);
               },
               text: AppStrings.next,
               width: 42.w,

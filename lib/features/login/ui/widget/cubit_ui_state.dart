@@ -38,7 +38,7 @@ class LoginBlocListener extends StatelessWidget {
             await CashHelper.putInt(
                 key: Keys.userID, value: loginResponse.user.id);
             await CashHelper.putString(key: Keys.token, value: map["token"]);
-              print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+            
             Navigator.pushReplacementNamed(context, AppRoute.navigationBar);
           },
           error: (error) {

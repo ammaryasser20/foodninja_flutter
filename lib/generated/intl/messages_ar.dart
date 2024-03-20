@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
         "buy": MessageLookupByLibrary.simpleMessage("شراء"),
+        "buyNow": MessageLookupByLibrary.simpleMessage("طلب الان"),
         "chat": MessageLookupByLibrary.simpleMessage("محادثة"),
         "congrats": MessageLookupByLibrary.simpleMessage("مبروك!"),
         "createAccount": MessageLookupByLibrary.simpleMessage("أنشاء حساب"),
@@ -67,8 +68,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "paymentMethod": MessageLookupByLibrary.simpleMessage("طر يقة الدفع"),
         "profile": MessageLookupByLibrary.simpleMessage("صفحتك"),
+        "restaurant": MessageLookupByLibrary.simpleMessage("مطاعم"),
         "signUpScreenTitle":
             MessageLookupByLibrary.simpleMessage("أنشاء حساب مجانى"),
+        "specialDeal": MessageLookupByLibrary.simpleMessage(" عرض خلص\n لليوم"),
         "supTitleOfSignUpProcess": MessageLookupByLibrary.simpleMessage(
             "سيتم عرض هذه البيانات في ملف تعريف حسابك للحماية"),
         "theEmailHasAlreadyBeenTaken":
@@ -79,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "uploadYourPhotoProfile": MessageLookupByLibrary.simpleMessage(
             "قم بتحميل الصورة الخاصة بملفك الشخصى"),
         "userName": MessageLookupByLibrary.simpleMessage("ضع اسمك"),
+        "viewMore": MessageLookupByLibrary.simpleMessage("عرض المزيد"),
         "yourProfileIsReadyToUse":
             MessageLookupByLibrary.simpleMessage("ملفك الشخصي جاهز للاستخدام")
       };

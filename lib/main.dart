@@ -1,6 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -11,7 +10,7 @@ import 'package:foodninja/features/manger/cubit/manger_cubit.dart';
 
 import 'package:foodninja/firebase_options.dart';
 import 'package:foodninja/generated/l10n.dart';
-import 'package:foodninja/features/onboarding/logic/onboarding_cubit.dart';
+
 import 'package:foodninja/core/resources/routes_manager.dart';
 import 'package:foodninja/core/resources/theme_manager.dart';
 import 'package:intl/intl.dart';
@@ -36,12 +35,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (_) => OnboardingCubit()),
-        BlocProvider(create: (_) => MangerCubit()),
-        //      BlocProvider(create: (_) => HomeCubit(getIt())),
-      ],
+    return BlocProvider(
+      create: (context) => MangerCubit(),
       child: BlocBuilder<MangerCubit, MangerState>(
         builder: (context, state) {
           return Sizer(builder: (BuildContext context, Orientation orientation,
@@ -52,7 +47,7 @@ class _MyAppState extends State<MyApp> {
               darkTheme: Themes.darkTheme,
               themeMode: MangerCubit.get(context).myMode
                   ? ThemeMode.dark
-                  : ThemeMode.light,
+                  : ThemeMode.dark,
               locale: Locale(MangerCubit.get(context).myLanguage == ''
                   ? 'en'
                   : MangerCubit.get(context).myLanguage),
@@ -65,7 +60,7 @@ class _MyAppState extends State<MyApp> {
               ],
               supportedLocales: S.delegate.supportedLocales,
               onGenerateRoute: onGenerateRoute,
-              initialRoute: AppRoute.login,
+              initialRoute: AppRoute.splashScreen,
             );
           });
         },
@@ -75,7 +70,7 @@ class _MyAppState extends State<MyApp> {
 }
 
 bool isItDark() {
-  // return true;
+  return true;
   return CashHelper.getBool(key: Keys.darkMode);
 }
 

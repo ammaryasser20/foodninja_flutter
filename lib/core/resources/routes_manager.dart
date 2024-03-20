@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:foodninja/core/di/dependency_injection.dart';
+import 'package:foodninja/features/home/logic/cubit/home_cubit.dart';
 import 'package:foodninja/features/home/ui/home_view.dart';
+import 'package:foodninja/features/home/ui/widget/explore_menus.dart';
+import 'package:foodninja/features/home/ui/widget/explore_restaurant.dart';
 import 'package:foodninja/features/login/logic/cubit/login_cubit.dart';
 import 'package:foodninja/features/login/ui/login_view.dart';
 import 'package:foodninja/features/navigation_bar/logic/navigation_cubit.dart';
 import 'package:foodninja/features/navigation_bar/ui/navigation_bar.dart';
+import 'package:foodninja/features/onboarding/logic/onboarding_cubit.dart';
 import 'package:foodninja/features/onboarding/ui/onboarding.dart';
 import 'package:foodninja/features/sign_up/logic/signup_cubit.dart';
 import 'package:foodninja/features/sign_up/ui/sing_up_view.dart';
@@ -23,12 +27,16 @@ class AppRoute {
   static const String signUpProcess = "signUpProcess";
   static const String signUpSuccess = "signUpSuccess";
   static const String navigationBar = "navigationBar";
+  static const String exploreAllRestaurant = "exploreAllRestaurant";
+  static const String exploreAllMenus = "exploreAllMenus";
 }
 
 Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
     case AppRoute.splashScreen:
-      return MaterialPageRoute(builder: (_) => const SplashScreen());
+      return MaterialPageRoute(
+          builder: (_) =>  const SplashScreen(),
+              );
     case AppRoute.login:
       return MaterialPageRoute(
           builder: (_) => BlocProvider(
@@ -36,7 +44,9 @@ Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
                 child: const Login(),
               ));
     case AppRoute.onboarding:
-      return MaterialPageRoute(builder: (_) => const Onboarding());
+      return MaterialPageRoute(builder: (_) =>BlocProvider(
+                create: (context) => getIt<OnboardingCubit>(),
+                child: const Onboarding()));
     case AppRoute.signUp:
       return MaterialPageRoute(
           builder: (_) => BlocProvider(
@@ -57,8 +67,20 @@ Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
     case AppRoute.navigationBar:
       return MaterialPageRoute(
           builder: (_) => BlocProvider(
-                create: (context) =>  getIt<NavigationCubit>(),
+                create: (context) => getIt<NavigationCubit>(),
                 child: const NavigationBarScreen(),
+              ));
+    case AppRoute.exploreAllRestaurant:
+      return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+                create: (context) => getIt<HomeCubit>(),
+                child: const ExploreAllRestaurant(),
+              ));
+    case AppRoute.exploreAllMenus:
+      return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+                create: (context) => getIt<HomeCubit>(),
+                child: const ExploreAllMenus(),
               ));
   }
   return null;
