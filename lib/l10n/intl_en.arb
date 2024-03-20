@@ -35,6 +35,11 @@
     "buy":"Buy",
     "chat": "Chat",
     "homeScreenTitle":"Find Your\nFavorite Food",
-    "hintSearchTextFormFile":"What do you want to order?"
+    "hintSearchTextFormFile":"What do you want to order?",
+    "specialDeal":"Special Deal\nFor Today",
+    "buyNow":"Buy now",
+    "restaurant":"Restaurants",
+    "viewMore": "View More",
+    "popularMenus":"Popular Menus"
  
 } 

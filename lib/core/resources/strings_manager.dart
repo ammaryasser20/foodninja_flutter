@@ -93,4 +93,19 @@ class AppStrings {
   static String get hintSearchTextFormFile => S
       .of(NavigationService.navigatorKey.currentContext!)
       .hintSearchTextFormFile;
+  static String get specialDeal => S
+      .of(NavigationService.navigatorKey.currentContext!)
+      .specialDeal;
+      static String get buyNow => S
+      .of(NavigationService.navigatorKey.currentContext!)
+      .buyNow;
+      static String get restaurant => S
+      .of(NavigationService.navigatorKey.currentContext!)
+      .restaurant;
+        static String get viewMore => S
+      .of(NavigationService.navigatorKey.currentContext!)
+      .viewMore;
+         static String get popularMenu => S
+      .of(NavigationService.navigatorKey.currentContext!)
+      .popularMenus;
 }

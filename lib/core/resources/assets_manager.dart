@@ -7,10 +7,10 @@ class ImageAssets {
   static const String logo = "$imagePath/Logo.svg";
   static const String pattern = "$imagePath/Pattern.svg";
   static const String pattern2 = "$imagePath/Pattern2.svg";
-  static String onboarding1 = isItDark()
+  static String get onboarding1 => isItDark()
       ? "$imagePath/onboarding1dark.svg"
       : "$imagePath/onboarding1.svg";
-  static String onboarding2 = isItDark()
+  static String get onboarding2 => isItDark()
       ? "$imagePath/onboarding2dark.svg"
       : "$imagePath/onboarding2.svg";
   static const String email = "$imagePath/Message.svg";
@@ -30,12 +30,17 @@ class ImageAssets {
   static const String chat = "$imagePath/chat.svg";
   static const String buy = "$imagePath/buy.svg";
   static const String iconNotification = "$imagePath/Icon_notification.svg";
-  static String filterIcon =
+  static String get filterIcon =>
       isItDark() ? "$imagePath/FilterDark.svg" : "$imagePath/FilterLight.svg";
 
-  static String iconSearch = isItDark()
+  static String get iconSearch => isItDark()
       ? "$imagePath/IconSearchDark.svg"
       : "$imagePath/IconSearchLight.svg";
+  static String get backGround => isItDark()
+      ? "$imagePath/backGroundDark.svg"
+      : "$imagePath/backGroundLight.svg";
+  static const String iceCream = "$imagePath/iceCream.png";
+    static const String errorImage = "$imagePath/errorImage.png";
 }
 
 class JsonAssets {}

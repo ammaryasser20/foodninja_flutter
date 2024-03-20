@@ -14,7 +14,7 @@ part 'onboarding_state.dart';
 
 class OnboardingCubit extends Cubit<OnboardingState> {
   OnboardingCubit() : super(OnboardingInitial());
-  static OnboardingCubit get(context) => BlocProvider.of(context);
+ // static OnboardngCubit get(context) => BlocProvider.of(context);
 // Future<void> darkMode(bool dark) async {
 //     await CashHelper.putBool(key: Keys.darkMode, value: dark);
 

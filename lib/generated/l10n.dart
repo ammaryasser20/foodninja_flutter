@@ -419,6 +419,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Special Deal\nFor Today`
+  String get specialDeal {
+    return Intl.message(
+      'Special Deal\nFor Today',
+      name: 'specialDeal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Buy now`
+  String get buyNow {
+    return Intl.message(
+      'Buy now',
+      name: 'buyNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Restaurants`
+  String get restaurant {
+    return Intl.message(
+      'Restaurants',
+      name: 'restaurant',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View More`
+  String get viewMore {
+    return Intl.message(
+      'View More',
+      name: 'viewMore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Popular Menus`
+  String get popularMenus {
+    return Intl.message(
+      'Popular Menus',
+      name: 'popularMenus',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -8,9 +8,7 @@ final class HomeInitial extends HomeState {}
 final class LoadingData extends HomeState {}
 
 final class SuccessData extends HomeState {
-    final AllRestaurant restaurants;
 
-  SuccessData({required this.restaurants});
 }
 
 final class ErrorData extends HomeState {

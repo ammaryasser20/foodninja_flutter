@@ -35,6 +35,12 @@
     "buy": "شراء",
     "chat": "محادثة",
     "homeScreenTitle": "ابحث عن \nطعامك المفضل",
-    "hintSearchTextFormFile": "ما الذي ترغب في طلبه؟"
+    "hintSearchTextFormFile": "ما الذي ترغب في طلبه؟",
+    "specialDeal":" عرض خلص\n لليوم",
+    "buyNow":"طلب الان",
+    "restaurant": "مطاعم",
+    "viewMore": "عرض المزيد",
+    "popularMenu": "قوائم شهيرة"
+    
     
 }

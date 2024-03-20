@@ -15,6 +15,7 @@ class ColorManager {
   static const Color primaryColorLight = Color(0xFF53E88B);
   static const Color darkOrange = Color(0xFFFFAD1D);
   static const Color orange = Color(0xFFF9A84D);
+  static const Color orangeTwo = Color(0xFFFF7C32);
   static const Color orangeLight = Color(0xFFDA6317);
   static const Color orangeLightTwo = Color(0xFFFEF8E0);
   static const Color shadowNotificationIconLite = Color(0xFF144E5A);
