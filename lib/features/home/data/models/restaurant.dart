@@ -8,7 +8,7 @@ class AllRestaurant {
   List<Restaurant>? restaurant;
 
   AllRestaurant({this.status, this.restaurant});
-   factory AllRestaurant.fromJson(Map<String, dynamic> json) =>
+  factory AllRestaurant.fromJson(Map<String, dynamic> json) =>
       _$AllRestaurantFromJson(json);
 }
 

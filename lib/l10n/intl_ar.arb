@@ -16,7 +16,7 @@
     "keepMeSignedIn":"ابقني مسجل",
     "emailMeAboutSpecialPricing":"راسلني عبر البريد الإلكتروني بخصوص الأسعار الخاصة",
     "alreadyHaveAnAccount":"هل لديك حساب بالفعل؟",
-    "haveNotAccount":"ليس لديك جساب؟",
+    "haveNotAccount":"ليس لديك حساب؟",
     "emailAndPasswordInvalid":"البريد الإلكتروني وكلمة المرور غير صالحين",
     "invalidEmail":"البريد الإلكتروني  غير صالح",
     "invalidPassword":".يجب أن تكون كلمة المرور 8 أحرف على الأقل",
@@ -40,7 +40,35 @@
     "buyNow":"طلب الان",
     "restaurant": "مطاعم",
     "viewMore": "عرض المزيد",
-    "popularMenu": "قوائم شهيرة"
-    
+    "popularMenu": "قوائم شهيرة",
+    "popular":"مشهورة",
+    "successAddImage": "تمت إضافة صورة الملف الشخصي بنجاح",
+    "memberGold": "عضو ذهبي",
+    "pleaseLoginAgain": "الرجاء تسجيل الدخول مرة أخرى",
+    "favorites": "المفضلة",
+    "darkMode": "الوضع الداكن",
+    "wightMode": "وضع الإضاءة",
+    "arabic":"Arabic",
+    "english":"English",
+    "tryAgainLater": "حدث خطأ، يرجى المحاولة مرة أخرى لاحقًا",
+    "addedToFavorite": "تمت إضافتها إلى المفضلة!",
+    "removeFromFavorite": "تمت إزالتها من المفضلة"
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
     
 }

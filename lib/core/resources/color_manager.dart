@@ -10,6 +10,7 @@ class ColorManager {
   static const Color liteGray = Color(0xFF252525);
   static const Color darkGray = Color(0xFF605D5D);
   static const Color darkShadow = Color(0x7E010207);
+  static const Color darkTow = Color(0xFF0E1110);
   static const Color gray = Color(0xFF3B3B3B);
   static const Color primaryColor = Color(0xFF15BE77);
   static const Color primaryColorLight = Color(0xFF53E88B);
@@ -19,5 +20,5 @@ class ColorManager {
   static const Color orangeLight = Color(0xFFDA6317);
   static const Color orangeLightTwo = Color(0xFFFEF8E0);
   static const Color shadowNotificationIconLite = Color(0xFF144E5A);
-  // static const Color shadowNotificationIconDark = Color(0xFFFEF8E0);
+
 }

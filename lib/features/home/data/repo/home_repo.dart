@@ -2,12 +2,14 @@ import 'package:dio/dio.dart';
 import 'package:foodninja/core/network/api_error_handler.dart';
 import 'package:foodninja/core/network/api_result.dart';
 import 'package:foodninja/core/network/api_service.dart';
+import 'package:foodninja/core/network/firebase.dart';
 import 'package:foodninja/features/home/data/models/food.dart';
 import 'package:foodninja/features/home/data/models/restaurant.dart';
 
-class RestaurantRepo {
+class HomeRepo {
   final ApiService _apiService;
-  RestaurantRepo(this._apiService);
+  FireBaseServices fireBaseServices;
+  HomeRepo(this._apiService,this.fireBaseServices);
 
   Future<ApiResult<AllRestaurant>> getAllRestaurant(String token) async {
     try {
@@ -28,4 +30,6 @@ class RestaurantRepo {
       return ApiResult.failure(ErrorHandler.handle(error));
     }
   }
+
+
 }

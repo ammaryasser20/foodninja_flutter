@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:json_annotation/json_annotation.dart';
 part 'login_response.g.dart';
 
@@ -47,5 +49,8 @@ class User {
       this.updatedAt});
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+  factory User.fromString(String user) {
+    return User.fromJson(jsonDecode(user));
+  }
   Map<String, dynamic> userToJson() => _$UserToJson(this);
 }

@@ -36,18 +36,18 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => MangerCubit(),
-      child: BlocBuilder<MangerCubit, MangerState>(
-        builder: (context, state) {
-          return Sizer(builder: (BuildContext context, Orientation orientation,
-              DeviceType deviceType) {
+      create: (context) => getIt<MangerCubit>(),
+      child: Sizer(builder: (BuildContext context, Orientation orientation,
+          DeviceType deviceType) {
+        return BlocBuilder<MangerCubit, MangerState>(
+          builder: (context, state) {
             return MaterialApp(
               navigatorKey: NavigationService.navigatorKey,
               theme: Themes.lightTheme,
               darkTheme: Themes.darkTheme,
               themeMode: MangerCubit.get(context).myMode
                   ? ThemeMode.dark
-                  : ThemeMode.dark,
+                  : ThemeMode.light,
               locale: Locale(MangerCubit.get(context).myLanguage == ''
                   ? 'en'
                   : MangerCubit.get(context).myLanguage),
@@ -62,16 +62,16 @@ class _MyAppState extends State<MyApp> {
               onGenerateRoute: onGenerateRoute,
               initialRoute: AppRoute.splashScreen,
             );
-          });
-        },
-      ),
+          },
+        );
+      }),
     );
   }
 }
 
 bool isItDark() {
-  return true;
-  return CashHelper.getBool(key: Keys.darkMode);
+  //return true;
+  return MangerCubit.get(NavigationService.navigatorKey.currentContext).myMode;
 }
 
 bool isItArabic() {

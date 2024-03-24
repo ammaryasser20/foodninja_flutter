@@ -1,18 +1,21 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:dio/dio.dart';
+
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:foodninja/core/local_DB/cached_app.dart';
+
 import 'package:foodninja/core/resources/strings_manager.dart';
 import 'package:foodninja/features/home/data/models/food.dart';
 import 'package:foodninja/features/home/data/models/restaurant.dart';
-import 'package:foodninja/features/home/data/repo/restaurant_repo.dart';
+import 'package:foodninja/features/home/data/repo/home_repo.dart';
+
 
 part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
-  HomeCubit(this.restaurantRepo, this.cachedApp) : super(HomeInitial());
+  HomeCubit(this.homeRepo, this.cachedApp) : super(HomeInitial());
   static HomeCubit get(context) => BlocProvider.of(context);
-  final RestaurantRepo restaurantRepo;
+  final HomeRepo homeRepo;
   AllRestaurant? restaurants;
   CachedApp cachedApp;
   AllFood? foods;
@@ -25,7 +28,7 @@ class HomeCubit extends Cubit<HomeState> {
     } catch (error) {
       if (activeLoading) emit(LoadingData());
       if (await Connectivity().checkConnectivity() != ConnectivityResult.none) {
-        final response = await restaurantRepo.getAllRestaurant(token);
+        final response = await homeRepo.getAllRestaurant(token);
         response.when(success: (restaurants) {
           cachedApp.saveData(restaurants, CachedKeys.restaurantsData);
           this.restaurants = restaurants;
@@ -48,7 +51,7 @@ class HomeCubit extends Cubit<HomeState> {
     } catch (error) {
       if (activeLoading) emit(LoadingData());
       if (await Connectivity().checkConnectivity() != ConnectivityResult.none) {
-        final response = await restaurantRepo.getAllFood(token);
+        final response = await homeRepo.getAllFood(token);
         response.when(success: (foods) {
           cachedApp.saveData(foods, CachedKeys.foodData);
           this.foods = foods;
@@ -62,4 +65,6 @@ class HomeCubit extends Cubit<HomeState> {
       }
     }
   }
+
+
 }
