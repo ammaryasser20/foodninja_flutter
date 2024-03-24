@@ -93,19 +93,38 @@ class AppStrings {
   static String get hintSearchTextFormFile => S
       .of(NavigationService.navigatorKey.currentContext!)
       .hintSearchTextFormFile;
-  static String get specialDeal => S
-      .of(NavigationService.navigatorKey.currentContext!)
-      .specialDeal;
-      static String get buyNow => S
-      .of(NavigationService.navigatorKey.currentContext!)
-      .buyNow;
-      static String get restaurant => S
-      .of(NavigationService.navigatorKey.currentContext!)
-      .restaurant;
-        static String get viewMore => S
-      .of(NavigationService.navigatorKey.currentContext!)
-      .viewMore;
-         static String get popularMenu => S
-      .of(NavigationService.navigatorKey.currentContext!)
-      .popularMenus;
+  static String get specialDeal =>
+      S.of(NavigationService.navigatorKey.currentContext!).specialDeal;
+  static String get buyNow =>
+      S.of(NavigationService.navigatorKey.currentContext!).buyNow;
+  static String get restaurant =>
+      S.of(NavigationService.navigatorKey.currentContext!).restaurant;
+  static String get viewMore =>
+      S.of(NavigationService.navigatorKey.currentContext!).viewMore;
+  static String get popularMenu =>
+      S.of(NavigationService.navigatorKey.currentContext!).popularMenus;
+  static String get popular =>
+      S.of(NavigationService.navigatorKey.currentContext!).popular;
+  static String get successAddImage =>
+      S.of(NavigationService.navigatorKey.currentContext!).successAddImage;
+  static String get memberGold =>
+      S.of(NavigationService.navigatorKey.currentContext!).memberGold;
+  static String get pleaseLoginAgain =>
+      S.of(NavigationService.navigatorKey.currentContext!).pleaseLoginAgain;
+  static String get favorites =>
+      S.of(NavigationService.navigatorKey.currentContext!).favorites;
+  static String get darkMode =>
+      S.of(NavigationService.navigatorKey.currentContext!).darkMode;
+  static String get wightMode =>
+      S.of(NavigationService.navigatorKey.currentContext!).wightMode;
+  static String get english =>
+      S.of(NavigationService.navigatorKey.currentContext!).english;
+  static String get arabic =>
+      S.of(NavigationService.navigatorKey.currentContext!).arabic;
+  static String get tryAgainLater =>
+      S.of(NavigationService.navigatorKey.currentContext!).tryAgainLater;
+  static String get addedToFavorite =>
+      S.of(NavigationService.navigatorKey.currentContext!).addedToFavorite;
+  static String get removeFromFavorite =>
+      S.of(NavigationService.navigatorKey.currentContext!).removeFromFavorite;
 }

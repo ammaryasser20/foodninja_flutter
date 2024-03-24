@@ -1,6 +1,14 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-enum Keys { notFirstTime, userInfo, token, userID, darkMode, language }
+enum Keys {
+  notFirstTime,
+  userInfo,
+  token,
+  userID,
+  darkMode,
+  language,
+  userImage
+}
 
 class CashHelper {
   static late SharedPreferences sharedPreferences;
@@ -30,6 +38,7 @@ class CashHelper {
   }
 
   static bool getBool({required Keys key}) {
+
     return sharedPreferences.getBool(key.name) ?? false;
   }
 
@@ -43,11 +52,11 @@ class CashHelper {
   }
 
   static clear() async {
-    final dark = getBool(key: Keys.darkMode);
+    final bool dark = getBool(key: Keys.darkMode);
     final language = getString(key: Keys.language);
     await sharedPreferences.clear();
     await sharedPreferences.setBool(Keys.notFirstTime.name, true);
-    await sharedPreferences.setBool(Keys.notFirstTime.name, dark);
-    await sharedPreferences.setString(Keys.notFirstTime.name, language);
+    await sharedPreferences.setBool(Keys.darkMode.name, dark);
+    await sharedPreferences.setString(Keys.language.name, language);
   }
 }

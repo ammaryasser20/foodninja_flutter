@@ -40,7 +40,15 @@ class ImageAssets {
       ? "$imagePath/backGroundDark.svg"
       : "$imagePath/backGroundLight.svg";
   static const String iceCream = "$imagePath/iceCream.png";
-    static const String errorImage = "$imagePath/errorImage.png";
+  static const String errorImage = "$imagePath/errorImage.png";
+  static const String locationIcon = "$imagePath/locationIcon.svg";
+  static const String loveIcon = "$imagePath/loveIcon.svg";
+  static const String unLoveIcon = "$imagePath/unLoveIcon.svg";
+  static const String iconMap = "$imagePath/iconMap.svg";
+  static const String iconStar = "$imagePath/iconStar.svg";
+  static const String shoppingBag = "$imagePath/shoppingBag.svg";
+  static const String profileImage = "$imagePath/nonprofile.jpeg";
+  static const String logout = "$imagePath/logout.svg";
 }
 
 class JsonAssets {}

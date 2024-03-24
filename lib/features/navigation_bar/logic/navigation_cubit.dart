@@ -4,6 +4,7 @@ import 'package:foodninja/features/buy/ui/buy_screens.dart';
 import 'package:foodninja/features/chat/ui/chat_screen.dart';
 import 'package:foodninja/features/home/logic/cubit/home_cubit.dart';
 import 'package:foodninja/features/home/ui/home_view.dart';
+import 'package:foodninja/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:foodninja/features/profile/ui/profile_screen.dart';
 
 part 'navigation_state.dart';
@@ -20,11 +21,25 @@ class NavigationCubit extends Cubit<NavigationState> {
 
   get screen {
     return [
-      BlocProvider(
-        create: (context) => getIt<HomeCubit>(),
+      MultiBlocProvider(
+        providers: [
+          BlocProvider<ProfileCubit>.value(
+            value: getIt<ProfileCubit>(),
+          ),
+          BlocProvider<HomeCubit>.value(
+            value: getIt<HomeCubit>(),
+          ),
+        ],
         child: const HomeScreen(),
       ),
-      const ProfileScreen(),
+      MultiBlocProvider(
+        providers: [
+          BlocProvider<ProfileCubit>.value(
+            value: getIt<ProfileCubit>(),
+          ),
+        ],
+        child: const ProfileScreen(),
+      ),
       const BuyScreen(),
       const ChatScreen()
     ];

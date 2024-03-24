@@ -40,6 +40,18 @@
     "buyNow":"Buy now",
     "restaurant":"Restaurants",
     "viewMore": "View More",
-    "popularMenus":"Popular Menus"
+    "popularMenus":"Popular Menus",
+    "popular":"popular",
+    "successAddImage":"Success adding image profile",
+    "memberGold":"Member Gold",
+    "pleaseLoginAgain":"please login again",
+    "favorites":"Favorites",
+    "darkMode":"Dark Mode",
+    "wightMode":"Wight Mode",
+    "arabic":"العربية",
+    "english":"الانجليزية",
+    "tryAgainLater":"An error occurred, please try again later",
+    "addedToFavorite":"Added to favorite!",
+    "removeFromFavorite":"Removed from Favorite"
  
 } 

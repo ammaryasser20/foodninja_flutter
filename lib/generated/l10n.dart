@@ -469,6 +469,126 @@ class S {
       args: [],
     );
   }
+
+  /// `popular`
+  String get popular {
+    return Intl.message(
+      'popular',
+      name: 'popular',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Success adding image profile`
+  String get successAddImage {
+    return Intl.message(
+      'Success adding image profile',
+      name: 'successAddImage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Member Gold`
+  String get memberGold {
+    return Intl.message(
+      'Member Gold',
+      name: 'memberGold',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `please login again`
+  String get pleaseLoginAgain {
+    return Intl.message(
+      'please login again',
+      name: 'pleaseLoginAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Favorites`
+  String get favorites {
+    return Intl.message(
+      'Favorites',
+      name: 'favorites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark Mode`
+  String get darkMode {
+    return Intl.message(
+      'Dark Mode',
+      name: 'darkMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wight Mode`
+  String get wightMode {
+    return Intl.message(
+      'Wight Mode',
+      name: 'wightMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `العربية`
+  String get arabic {
+    return Intl.message(
+      'العربية',
+      name: 'arabic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الانجليزية`
+  String get english {
+    return Intl.message(
+      'الانجليزية',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occurred, please try again later`
+  String get tryAgainLater {
+    return Intl.message(
+      'An error occurred, please try again later',
+      name: 'tryAgainLater',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Added to favorite!`
+  String get addedToFavorite {
+    return Intl.message(
+      'Added to favorite!',
+      name: 'addedToFavorite',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Removed from Favorite`
+  String get removeFromFavorite {
+    return Intl.message(
+      'Removed from Favorite',
+      name: 'removeFromFavorite',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

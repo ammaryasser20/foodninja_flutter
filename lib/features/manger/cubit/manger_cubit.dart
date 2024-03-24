@@ -1,8 +1,5 @@
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:foodninja/core/local_DB/cash_helper.dart';
-
-import 'package:intl/intl.dart';
 
 part 'manger_state.dart';
 
@@ -16,7 +13,6 @@ class MangerCubit extends Cubit<MangerState> {
     myLanguage = language;
     await CashHelper.putString(key: Keys.language, value: language);
 
-    print(Intl.getCurrentLocale());
     emit(ChangeLanguage());
   }
 

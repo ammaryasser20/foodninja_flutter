@@ -19,7 +19,8 @@ class SignUpCubit extends Cubit<SignUpState> {
   final RegisterRepo _registerRepo;
   bool emailMeAboutSpecialPricing = true;
   File? userImage;
-  SignUpCubit(this._registerRepo) : super(const SignUpState.initial());
+  FireBaseServices fireBaseServices;
+  SignUpCubit(this._registerRepo,this.fireBaseServices) : super(const SignUpState.initial());
   void register(RegisterRequestBody registerRequestBody) async {
     emit(const SignUpState.loading());
     if (await Connectivity().checkConnectivity() != ConnectivityResult.none) {
@@ -51,15 +52,17 @@ class SignUpCubit extends Cubit<SignUpState> {
         if (await Connectivity().checkConnectivity() !=
             ConnectivityResult.none) {
           final file = File(userImage!.path);
-          if (await FireBaseServices.uploadImage(
+          if (await fireBaseServices.uploadImage(
               file: file, id: CashHelper.getInt(key: Keys.userID))) {
             emit(const SignUpState.successAddImage());
           } else {
             emit(SignUpState.errorUploadingImage(error: AppStrings.tryAgain));
           }
         } else {
-          emit(SignUpState.errorUploadingImage(
-              error: AppStrings.noInternetConnection));
+          emit(
+            SignUpState.errorUploadingImage(
+                error: AppStrings.noInternetConnection),
+          );
         }
       }
     }

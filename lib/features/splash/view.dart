@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
     timer = Timer(const Duration(seconds: 2), _goNext);
   }
 
-  _goNext() async {
+  _goNext()  {
     if (CashHelper.getBool(key: Keys.notFirstTime)) {
       Navigator.pushReplacementNamed(context, AppRoute.login);
     } else {

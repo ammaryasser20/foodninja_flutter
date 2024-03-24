@@ -25,6 +25,7 @@ class _ExploreAllRestaurant extends State<ExploreAllRestaurant> {
   void initState() {
     final token = CashHelper.getString(key: Keys.token);
     context.read<HomeCubit>().getAllRestaurant(token: token);
+    context.read<HomeCubit>().getAllFood(token: token);
     super.initState();
   }
 
@@ -32,7 +33,7 @@ class _ExploreAllRestaurant extends State<ExploreAllRestaurant> {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
-        if (state is SuccessData) {
+        if (state is SuccessData && context.read<HomeCubit>().foods !=null) {
           return Scaffold(
             body: Stack(
               children: [
@@ -71,11 +72,12 @@ class _ExploreAllRestaurant extends State<ExploreAllRestaurant> {
                                       crossAxisSpacing: 5.w,
                                       mainAxisSpacing: 3.h,
                                       crossAxisCount: 2),
-                              itemBuilder: (context, index) => RestaurantsItem(
+                              itemBuilder: (context, index) => RestaurantItem(
                                 restaurant: context
                                     .read<HomeCubit>()
                                     .restaurants!
                                     .restaurant![index],
+                     
                               ),
                             ),
                           )

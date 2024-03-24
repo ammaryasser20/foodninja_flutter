@@ -25,4 +25,10 @@ abstract class ApiService {
       @Header('Authorization') String token);
   @GET(ApiConstants.food)
   Future<AllFood> getAllFood(@Header('Authorization') String token);
+  @GET("${ApiConstants.food}/{id}")
+  Future<AllFood> getFoodByID(
+      @Header('Authorization') String token, @Path("id") int id);
+  @GET("${ApiConstants.restaurant}/{id}")
+  Future<AllRestaurant> getRestaurantByID(
+      @Header('Authorization') String token, @Path("id") String id);
 }

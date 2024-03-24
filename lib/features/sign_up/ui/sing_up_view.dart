@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:foodninja/features/manger/cubit/manger_cubit.dart';
-import 'package:foodninja/features/onboarding/logic/onboarding_cubit.dart';
 import 'package:foodninja/features/sign_up/data/models/register_request_body.dart';
 import 'package:foodninja/features/sign_up/logic/signup_cubit.dart';
 import 'package:foodninja/features/sign_up/logic/signup_state.dart';

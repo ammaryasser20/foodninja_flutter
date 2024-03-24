@@ -22,18 +22,24 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addedToFavorite":
+            MessageLookupByLibrary.simpleMessage("Added to favorite!"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("already have an account?"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "buy": MessageLookupByLibrary.simpleMessage("Buy"),
         "buyNow": MessageLookupByLibrary.simpleMessage("Buy now"),
         "chat": MessageLookupByLibrary.simpleMessage("Chat"),
         "congrats": MessageLookupByLibrary.simpleMessage("Congrats!"),
         "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailAndPasswordInvalid":
             MessageLookupByLibrary.simpleMessage("email and password invalid."),
         "emailMeAboutSpecialPricing": MessageLookupByLibrary.simpleMessage(
             "Email Me About Special Pricing"),
+        "english": MessageLookupByLibrary.simpleMessage("الانجليزية"),
+        "favorites": MessageLookupByLibrary.simpleMessage("Favorites"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Your Password?"),
         "haveNotAccount":
@@ -51,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginScreenTitle":
             MessageLookupByLibrary.simpleMessage("Login To Your Account"),
+        "memberGold": MessageLookupByLibrary.simpleMessage("Member Gold"),
         "nameCantBeEmpty":
             MessageLookupByLibrary.simpleMessage("Name cant be empty"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
@@ -68,13 +75,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Or Continue With"),
         "password": MessageLookupByLibrary.simpleMessage("password"),
         "paymentMethod": MessageLookupByLibrary.simpleMessage("Payment Method"),
+        "pleaseLoginAgain":
+            MessageLookupByLibrary.simpleMessage("please login again"),
+        "popular": MessageLookupByLibrary.simpleMessage("popular"),
         "popularMenus": MessageLookupByLibrary.simpleMessage("Popular Menus"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "removeFromFavorite":
+            MessageLookupByLibrary.simpleMessage("Removed from Favorite"),
         "restaurant": MessageLookupByLibrary.simpleMessage("Restaurants"),
         "signUpScreenTitle":
             MessageLookupByLibrary.simpleMessage("Sign Up For Free"),
         "specialDeal":
             MessageLookupByLibrary.simpleMessage("Special Deal\nFor Today"),
+        "successAddImage": MessageLookupByLibrary.simpleMessage(
+            "Success adding image profile"),
         "supTitleOfSignUpProcess": MessageLookupByLibrary.simpleMessage(
             "This data will be displayed in your account\nprofile for security"),
         "theEmailHasAlreadyBeenTaken": MessageLookupByLibrary.simpleMessage(
@@ -82,10 +96,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "theEmailOrPasswordIsIncorrect": MessageLookupByLibrary.simpleMessage(
             "The email or password is incorrect !"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Try again"),
+        "tryAgainLater": MessageLookupByLibrary.simpleMessage(
+            "An error occurred, please try again later"),
         "uploadYourPhotoProfile":
             MessageLookupByLibrary.simpleMessage("Upload Your Photo\nProfile"),
         "userName": MessageLookupByLibrary.simpleMessage("user name"),
         "viewMore": MessageLookupByLibrary.simpleMessage("View More"),
+        "wightMode": MessageLookupByLibrary.simpleMessage("Wight Mode"),
         "yourProfileIsReadyToUse":
             MessageLookupByLibrary.simpleMessage("Your Profile Is Ready To Use")
       };

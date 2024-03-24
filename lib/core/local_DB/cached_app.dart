@@ -3,7 +3,12 @@ import 'package:foodninja/core/network/api_error_handler.dart';
 class CachedKeys {
   static String restaurantsData = "restaurants_Data";
   static String foodData = "food_Data";
-  static int expirationCacheTime = 60000;
+  static String favoriteData = "favorite_Data";
+  static Map<String, int> expirationCacheTime = {
+    "restaurants_Data": 6000000,
+    "food_Data": 6000000,
+    "favorite_Data":3600000
+  };
 }
 
 class CachedApp {
@@ -23,7 +28,7 @@ class CachedApp {
   dynamic getCachedData(String key) {
     CachedItem? cachedItem = cachedData[key];
     if (cachedItem != null &&
-        cachedItem.isValid(CachedKeys.expirationCacheTime)) {
+        cachedItem.isValid(CachedKeys.expirationCacheTime[key]!)) {
       return cachedItem.data;
     } else {
       throw ErrorHandler.handle(DataSource.CACHE_ERROR);

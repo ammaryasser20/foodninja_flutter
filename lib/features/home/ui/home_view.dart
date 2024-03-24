@@ -15,6 +15,7 @@ import 'package:foodninja/features/home/ui/widget/restaurant_item.dart';
 
 import 'package:foodninja/features/home/ui/widget/special_deal.dart';
 import 'package:foodninja/features/home/ui/widget/title_with_searchbar.dart';
+import 'package:foodninja/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:foodninja/main.dart';
 
 import 'package:sizer/sizer.dart';
@@ -31,14 +32,13 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     final token = CashHelper.getString(key: Keys.token);
 
-    Future.wait([
-      context.read<HomeCubit>().getAllRestaurant(token: token),
-      context.read<HomeCubit>().getAllFood(token: token, activeLoading: false),
-    ]);
+    context.read<HomeCubit>().getAllRestaurant(token: token);
+    context.read<HomeCubit>().getAllFood(token: token);
+    ProfileCubit.get(context).getUserInfo();
+
     super.initState();
   }
 
-  @override
   @override
   void dispose() {
     controller.dispose();
@@ -60,7 +60,9 @@ class _HomeScreenState extends State<HomeScreen> {
           return Center(
             child: Text((state).errorMassage),
           );
-        } else if (state is SuccessData) {
+        } else if (state is SuccessData &&
+            context.read<HomeCubit>().foods != null &&
+            context.read<HomeCubit>().restaurants != null) {
           return Stack(
             children: [
               Transform.flip(
@@ -71,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.symmetric(horizontal: 5.w),
                   child: ListView(
                     children: [
-                     const TitleWithSearchBar(),
+                      const TitleWithSearchBar(),
                       SizedBox(
                         height: 1.h,
                       ),
@@ -110,8 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(
                         height: 1.h,
                       ),
-                      if (context.read<HomeCubit>().restaurants!.restaurant !=
-                          null)
+                      if (context.read<HomeCubit>().restaurants != null)
                         SizedBox(
                           width: 100.w,
                           height: 25.h,
@@ -124,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 .take(3)
                                 .length,
                             itemBuilder: (context, index) {
-                              return RestaurantsItem(
+                              return RestaurantItem(
                                 restaurant: context
                                     .read<HomeCubit>()
                                     .restaurants!
@@ -191,6 +192,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                     .read<HomeCubit>()
                                     .foods!
                                     .food![index],
+                                restaurant: context
+                                    .read<HomeCubit>()
+                                    .restaurants!
+                                    .restaurant!
+                                    .firstWhere(
+                                        (element) =>
+                                            '${element.id}' ==
+                                            context
+                                                .read<HomeCubit>()
+                                                .foods!
+                                                .food![index]
+                                                .restaurantId,
+                                        orElse: () => context
+                                            .read<HomeCubit>()
+                                            .restaurants!
+                                            .restaurant![0]),
                               );
                             },
                             separatorBuilder:

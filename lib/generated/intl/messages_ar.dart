@@ -22,22 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addedToFavorite":
+            MessageLookupByLibrary.simpleMessage("تمت إضافتها إلى المفضلة!"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "buy": MessageLookupByLibrary.simpleMessage("شراء"),
         "buyNow": MessageLookupByLibrary.simpleMessage("طلب الان"),
         "chat": MessageLookupByLibrary.simpleMessage("محادثة"),
         "congrats": MessageLookupByLibrary.simpleMessage("مبروك!"),
         "createAccount": MessageLookupByLibrary.simpleMessage("أنشاء حساب"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "emailAndPasswordInvalid": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني وكلمة المرور غير صالحين"),
         "emailMeAboutSpecialPricing": MessageLookupByLibrary.simpleMessage(
             "راسلني عبر البريد الإلكتروني بخصوص الأسعار الخاصة"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
+        "favorites": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمه المرور؟"),
         "haveNotAccount":
-            MessageLookupByLibrary.simpleMessage("ليس لديك جساب؟"),
+            MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "hintSearchTextFormFile":
             MessageLookupByLibrary.simpleMessage("ما الذي ترغب في طلبه؟"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
@@ -51,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginScreenTitle":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
+        "memberGold": MessageLookupByLibrary.simpleMessage("عضو ذهبي"),
         "nameCantBeEmpty":
             MessageLookupByLibrary.simpleMessage("الاسم لا يمكن أن يكون فارغا"),
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
@@ -67,11 +74,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "orContinueWith": MessageLookupByLibrary.simpleMessage("او الدخول ب"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "paymentMethod": MessageLookupByLibrary.simpleMessage("طر يقة الدفع"),
+        "pleaseLoginAgain": MessageLookupByLibrary.simpleMessage(
+            "الرجاء تسجيل الدخول مرة أخرى"),
+        "popular": MessageLookupByLibrary.simpleMessage("مشهورة"),
         "profile": MessageLookupByLibrary.simpleMessage("صفحتك"),
+        "removeFromFavorite":
+            MessageLookupByLibrary.simpleMessage("تمت إزالتها من المفضلة"),
         "restaurant": MessageLookupByLibrary.simpleMessage("مطاعم"),
         "signUpScreenTitle":
             MessageLookupByLibrary.simpleMessage("أنشاء حساب مجانى"),
         "specialDeal": MessageLookupByLibrary.simpleMessage(" عرض خلص\n لليوم"),
+        "successAddImage": MessageLookupByLibrary.simpleMessage(
+            "تمت إضافة صورة الملف الشخصي بنجاح"),
         "supTitleOfSignUpProcess": MessageLookupByLibrary.simpleMessage(
             "سيتم عرض هذه البيانات في ملف تعريف حسابك للحماية"),
         "theEmailHasAlreadyBeenTaken":
@@ -79,10 +93,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "theEmailOrPasswordIsIncorrect": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني أو كلمة المرور غير صحيحة"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا"),
+        "tryAgainLater": MessageLookupByLibrary.simpleMessage(
+            "حدث خطأ، يرجى المحاولة مرة أخرى لاحقًا"),
         "uploadYourPhotoProfile": MessageLookupByLibrary.simpleMessage(
             "قم بتحميل الصورة الخاصة بملفك الشخصى"),
         "userName": MessageLookupByLibrary.simpleMessage("ضع اسمك"),
         "viewMore": MessageLookupByLibrary.simpleMessage("عرض المزيد"),
+        "wightMode": MessageLookupByLibrary.simpleMessage("وضع الإضاءة"),
         "yourProfileIsReadyToUse":
             MessageLookupByLibrary.simpleMessage("ملفك الشخصي جاهز للاستخدام")
       };

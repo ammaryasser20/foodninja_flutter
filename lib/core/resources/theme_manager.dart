@@ -31,7 +31,7 @@ class Themes {
           fontSize: FontSize.s22,
           fontWeight: FontWeightManager.regular),
       titleSmall: TextStyle(
-          color: ColorManager.white,
+          color: ColorManager.dark,
           fontSize: FontSize.s20,
           fontWeight: FontWeightManager.regular),
       displayLarge: TextStyle(
