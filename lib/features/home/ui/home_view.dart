@@ -6,12 +6,13 @@ import 'package:foodninja/core/local_DB/cash_helper.dart';
 import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/font_manager.dart';
-import 'package:foodninja/core/resources/routes_manager.dart';
+import 'package:foodninja/core/network/routes_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
 import 'package:foodninja/features/home/logic/cubit/home_cubit.dart';
+import 'package:foodninja/features/widget/default_search_bar.dart';
 
-import 'package:foodninja/features/home/ui/widget/food_item.dart';
-import 'package:foodninja/features/home/ui/widget/restaurant_item.dart';
+import 'package:foodninja/features/widget/food_item.dart';
+import 'package:foodninja/features/widget/restaurant_item.dart';
 
 import 'package:foodninja/features/home/ui/widget/special_deal.dart';
 import 'package:foodninja/features/home/ui/widget/title_with_searchbar.dart';
@@ -74,6 +75,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: ListView(
                     children: [
                       const TitleWithSearchBar(),
+                      DefaultSearchBar(
+                        onTab: () {
+                          HelperFunction.pushToSearch(context: context);
+                        },
+                      ),
                       SizedBox(
                         height: 1.h,
                       ),

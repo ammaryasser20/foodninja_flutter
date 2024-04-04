@@ -1,17 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:foodninja/core/helper/helper_function.dart';
 import 'package:foodninja/core/local_DB/cash_helper.dart';
 import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/font_manager.dart';
-import 'package:foodninja/core/resources/routes_manager.dart';
+import 'package:foodninja/core/network/routes_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
-import 'package:foodninja/features/widget/default_bottom.dart';
+import 'package:foodninja/features/widget/default_button.dart';
 import 'package:foodninja/main.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:sizer/sizer.dart';
@@ -80,7 +76,7 @@ class SignUpSuccessScreen extends StatelessWidget {
             SizedBox(
               height: 25.h,
             ),
-            DefaultBottom(
+            DefaultButton(
                 width: 42.w,
                 height: 7.h,
                 text: AppStrings.login,

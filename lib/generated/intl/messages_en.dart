@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addOrder": MessageLookupByLibrary.simpleMessage("Add Order"),
+        "addedToChart": MessageLookupByLibrary.simpleMessage("Added To Chart"),
         "addedToFavorite":
             MessageLookupByLibrary.simpleMessage("Added to favorite!"),
         "alreadyHaveAnAccount":
@@ -29,10 +31,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "buy": MessageLookupByLibrary.simpleMessage("Buy"),
         "buyNow": MessageLookupByLibrary.simpleMessage("Buy now"),
+        "cantBeLowerThan16": MessageLookupByLibrary.simpleMessage(
+            "Cant be Lower than 16 number"),
         "chat": MessageLookupByLibrary.simpleMessage("Chat"),
+        "confirmOrder": MessageLookupByLibrary.simpleMessage("Confirm Order"),
         "congrats": MessageLookupByLibrary.simpleMessage("Congrats!"),
         "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "delivery": MessageLookupByLibrary.simpleMessage("Delivery"),
+        "deliveryCharge":
+            MessageLookupByLibrary.simpleMessage("Delivery Charge"),
+        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailAndPasswordInvalid":
             MessageLookupByLibrary.simpleMessage("email and password invalid."),
@@ -42,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "favorites": MessageLookupByLibrary.simpleMessage("Favorites"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Your Password?"),
+        "fromGallery": MessageLookupByLibrary.simpleMessage("From Gallery"),
         "haveNotAccount":
             MessageLookupByLibrary.simpleMessage("I don\'t Have account?"),
         "hintSearchTextFormFile":
@@ -58,11 +68,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginScreenTitle":
             MessageLookupByLibrary.simpleMessage("Login To Your Account"),
         "memberGold": MessageLookupByLibrary.simpleMessage("Member Gold"),
+        "menu": MessageLookupByLibrary.simpleMessage("Menu"),
         "nameCantBeEmpty":
             MessageLookupByLibrary.simpleMessage("Name cant be empty"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noInternetConnection":
             MessageLookupByLibrary.simpleMessage("No internet connection"),
+        "noMessages": MessageLookupByLibrary.simpleMessage("No Messages"),
+        "noOrder": MessageLookupByLibrary.simpleMessage("No Order"),
         "onboardingSubTitleOne": MessageLookupByLibrary.simpleMessage(
             "Here You Can find a chef or dish for every\ntaste and color. Enjoy!"),
         "onboardingSubTitleTwo": MessageLookupByLibrary.simpleMessage(
@@ -73,8 +86,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Food Ninja is Where Your\nComfort Food Lives"),
         "orContinueWith":
             MessageLookupByLibrary.simpleMessage("Or Continue With"),
+        "orderDetails": MessageLookupByLibrary.simpleMessage("Order details"),
         "password": MessageLookupByLibrary.simpleMessage("password"),
         "paymentMethod": MessageLookupByLibrary.simpleMessage("Payment Method"),
+        "placeMyOrder": MessageLookupByLibrary.simpleMessage("Place My Order"),
         "pleaseLoginAgain":
             MessageLookupByLibrary.simpleMessage("please login again"),
         "popular": MessageLookupByLibrary.simpleMessage("popular"),
@@ -83,26 +98,37 @@ class MessageLookup extends MessageLookupByLibrary {
         "removeFromFavorite":
             MessageLookupByLibrary.simpleMessage("Removed from Favorite"),
         "restaurant": MessageLookupByLibrary.simpleMessage("Restaurants"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
+        "searchNotFound":
+            MessageLookupByLibrary.simpleMessage("Search not found"),
         "signUpScreenTitle":
             MessageLookupByLibrary.simpleMessage("Sign Up For Free"),
         "specialDeal":
             MessageLookupByLibrary.simpleMessage("Special Deal\nFor Today"),
+        "subTotal": MessageLookupByLibrary.simpleMessage("Sub-Total"),
         "successAddImage": MessageLookupByLibrary.simpleMessage(
             "Success adding image profile"),
         "supTitleOfSignUpProcess": MessageLookupByLibrary.simpleMessage(
             "This data will be displayed in your account\nprofile for security"),
+        "takePhoto": MessageLookupByLibrary.simpleMessage("Take Photo"),
         "theEmailHasAlreadyBeenTaken": MessageLookupByLibrary.simpleMessage(
             "The email has already been taken."),
         "theEmailOrPasswordIsIncorrect": MessageLookupByLibrary.simpleMessage(
             "The email or password is incorrect !"),
+        "total": MessageLookupByLibrary.simpleMessage("Total"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Try again"),
         "tryAgainLater": MessageLookupByLibrary.simpleMessage(
             "An error occurred, please try again later"),
+        "type": MessageLookupByLibrary.simpleMessage("Type"),
+        "typeWhatYouWantToSearchFor": MessageLookupByLibrary.simpleMessage(
+            "Type what you want to search for"),
         "uploadYourPhotoProfile":
             MessageLookupByLibrary.simpleMessage("Upload Your Photo\nProfile"),
         "userName": MessageLookupByLibrary.simpleMessage("user name"),
         "viewMore": MessageLookupByLibrary.simpleMessage("View More"),
         "wightMode": MessageLookupByLibrary.simpleMessage("Wight Mode"),
+        "yourOrderConfirmed":
+            MessageLookupByLibrary.simpleMessage("Your order confirmed"),
         "yourProfileIsReadyToUse":
             MessageLookupByLibrary.simpleMessage("Your Profile Is Ready To Use")
       };

@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+
+import 'package:foodninja/core/helper/helper_function.dart';
 import 'package:foodninja/core/local_DB/cash_helper.dart';
 import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
+import 'package:foodninja/core/resources/strings_manager.dart';
 
 import 'package:foodninja/features/home/logic/cubit/home_cubit.dart';
+import 'package:foodninja/features/widget/default_search_bar.dart';
 
-import 'package:foodninja/features/home/ui/widget/restaurant_item.dart';
+import 'package:foodninja/features/widget/restaurant_item.dart';
 import 'package:foodninja/features/home/ui/widget/title_with_searchbar.dart';
+
 import 'package:foodninja/main.dart';
 import 'package:sizer/sizer.dart';
 
@@ -33,7 +38,7 @@ class _ExploreAllRestaurant extends State<ExploreAllRestaurant> {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
-        if (state is SuccessData && context.read<HomeCubit>().foods !=null) {
+        if (state is SuccessData && context.read<HomeCubit>().foods != null) {
           return Scaffold(
             body: Stack(
               children: [
@@ -47,6 +52,12 @@ class _ExploreAllRestaurant extends State<ExploreAllRestaurant> {
                     child: ListView(
                       children: [
                         const TitleWithSearchBar(),
+                        DefaultSearchBar(
+                          onTab: () {
+                            HelperFunction.pushToSearch(
+                                searchFor: AppStrings.restaurant, context: context);
+                          },
+                        ),
                         SizedBox(
                           height: 2.h,
                         ),
@@ -77,7 +88,6 @@ class _ExploreAllRestaurant extends State<ExploreAllRestaurant> {
                                     .read<HomeCubit>()
                                     .restaurants!
                                     .restaurant![index],
-                     
                               ),
                             ),
                           )

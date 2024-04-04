@@ -7,7 +7,7 @@ import 'package:foodninja/core/resources/font_manager.dart';
 
 import 'package:foodninja/features/home/data/models/restaurant.dart';
 import 'package:foodninja/features/home/logic/cubit/home_cubit.dart';
-import 'package:foodninja/features/home/ui/widget/restaurant_screen.dart';
+import 'package:foodninja/features/widget/restaurant_screen.dart';
 import 'package:foodninja/main.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:sizer/sizer.dart';

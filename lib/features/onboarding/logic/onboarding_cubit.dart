@@ -6,7 +6,7 @@ import 'package:foodninja/features/onboarding/data/models/models.dart';
 
 import 'package:foodninja/main.dart';
 import 'package:foodninja/core/resources/assets_manager.dart';
-import 'package:foodninja/core/resources/routes_manager.dart';
+import 'package:foodninja/core/network/routes_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
 import 'package:meta/meta.dart';
 

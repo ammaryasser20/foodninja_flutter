@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,7 +9,7 @@ import 'package:foodninja/main.dart';
 import 'package:foodninja/features/onboarding/logic/onboarding_cubit.dart';
 import 'package:foodninja/core/resources/font_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
-import 'package:foodninja/features/widget/default_bottom.dart';
+import 'package:foodninja/features/widget/default_button.dart';
 
 import 'package:sizer/sizer.dart';
 
@@ -27,9 +26,9 @@ class _OnboardingState extends State<Onboarding> {
   late List<SliderObject> sliderObjectList;
   @override
   void initState() {
-    sliderObjectList =
-        context.read<OnboardingCubit>()
-            .getSliderData(NavigationService.navigatorKey.currentContext!);
+    sliderObjectList = context
+        .read<OnboardingCubit>()
+        .getSliderData(NavigationService.navigatorKey.currentContext!);
     CashHelper.putBool(key: Keys.notFirstTime, value: true);
 
     super.initState();
@@ -77,10 +76,9 @@ class _OnboardingState extends State<Onboarding> {
                 },
               ),
             ),
-            DefaultBottom(
+            DefaultButton(
               onPressed: () {
-              context.read<OnboardingCubit>()
-            .nextBottom(_pageController);
+                context.read<OnboardingCubit>().nextBottom(_pageController);
               },
               text: AppStrings.next,
               width: 42.w,

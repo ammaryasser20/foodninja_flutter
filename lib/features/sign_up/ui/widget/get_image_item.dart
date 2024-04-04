@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:foodninja/core/resources/font_manager.dart';
 import 'package:sizer/sizer.dart';
 
 import 'package:foodninja/core/resources/color_manager.dart';
@@ -10,9 +11,11 @@ class GetImageItem extends StatelessWidget {
     Key? key,
     required this.image,
     required this.function,
+    required this.text,
   }) : super(key: key);
   final String image;
   final Function function;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -35,9 +38,24 @@ class GetImageItem extends StatelessWidget {
             )
           ],
         ),
-        child: SvgPicture.asset(
-          image,
-          fit: BoxFit.scaleDown,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SvgPicture.asset(
+              image,
+              fit: BoxFit.scaleDown,
+            ),
+            SizedBox(
+              height: 1.5.h,
+            ),
+            Text(
+              text,
+              style: Theme.of(context)
+                  .textTheme
+                  .displayMedium!
+                  .copyWith(fontFamily: FontFamilies.bentonSansBold),
+            )
+          ],
         ),
       ),
     );

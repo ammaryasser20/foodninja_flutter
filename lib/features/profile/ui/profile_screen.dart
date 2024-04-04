@@ -11,8 +11,10 @@ import 'package:foodninja/core/resources/assets_manager.dart';
 
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/font_manager.dart';
-import 'package:foodninja/core/resources/routes_manager.dart';
+import 'package:foodninja/core/network/routes_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
+import 'package:foodninja/features/buy/logic/cubit/buy_cubit.dart';
+import 'package:foodninja/features/chat/logic/cubit/chat_cubit.dart';
 import 'package:foodninja/features/manger/cubit/manger_cubit.dart';
 import 'package:foodninja/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:foodninja/features/profile/ui/widget/favorites_item.dart';
@@ -115,6 +117,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     onPressed: () {
                                       CashHelper.clear();
                                       cachedApp.clearCache();
+                                      ChatCubit.get(context).clearData();
+                                      BuyCubit.get(context).clearData();
                                       HelperFunction.pushNamedAndRemoveUntil(
                                           AppRoute.login);
                                     },
@@ -134,17 +138,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     fontFamily: FontFamilies.bentonSansBold,
                                   ),
                             ),
-                            Text(
-                              ProfileCubit.get(context).user!.email ?? "error",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .displayMedium!
-                                  .copyWith(
-                                    color: isItDark()
-                                        ? ColorManager.white.withOpacity(0.3)
-                                        : ColorManager.gray.withOpacity(.5),
-                                    fontFamily: FontFamilies.bentonSansRegular,
-                                  ),
+                            Row(
+                              children: [
+                                Text(
+                                  ProfileCubit.get(context).user!.email ??
+                                      "error",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .displayMedium!
+                                      .copyWith(
+                                        color: isItDark()
+                                            ? ColorManager.white
+                                                .withOpacity(0.3)
+                                            : ColorManager.gray.withOpacity(.5),
+                                        fontFamily:
+                                            FontFamilies.bentonSansRegular,
+                                      ),
+                                ),
+                                const Spacer(),
+                                IconButton(
+                                    onPressed: () {
+                                      ProfileCubit.get(context)
+                                          .showImagePickerOption(context);
+                                    },
+                                    icon: const Icon(Icons.image))
+                              ],
                             ),
                             SizedBox(
                               height: 2.h,
@@ -235,7 +253,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
           } else if (state is ProfileError) {
             return Text(state.error);
           } else {
-            return Container();
+            ProfileCubit.get(context).getUserInfo();
+            return const Center(
+              child: CircularProgressIndicator(
+                color: ColorManager.primaryColor,
+              ),
+            );
           }
         },
       ),

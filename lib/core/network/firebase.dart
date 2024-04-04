@@ -64,4 +64,15 @@ class FireBaseServices {
       throw "error in server";
     }
   }
+
+  Future<void> addPayment(int userID, List<String> paymentWays) async {
+    try {
+      await FirebaseFirestore.instance.collection("user").doc('$userID').set({
+        "Payments": paymentWays,
+      }, SetOptions(merge: true));
+    } catch (e) {
+      throw "error in server";
+    }
+  }
+  
 }

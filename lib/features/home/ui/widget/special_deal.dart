@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
@@ -18,25 +17,27 @@ class SpecialDeal extends StatelessWidget {
       width: 90.w,
       height: 19.h,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          gradient: const LinearGradient(colors: [
+        borderRadius: BorderRadius.circular(20),
+        gradient: const LinearGradient(
+          colors: [
             ColorManager.primaryColorLight,
             ColorManager.primaryColor,
-          ])),
+          ],
+        ),
+      ),
       child: Stack(
         children: [
           Opacity(
             opacity: .2,
             child: SvgPicture.asset(
               ImageAssets.backGround,
-              width: 90.w,
+              width: 100.w,
               fit: BoxFit.fill,
             ),
           ),
           Positioned(
             left: 0,
             child: Image.asset(
-              // width: h,
               height: 19.h,
               ImageAssets.iceCream,
               fit: BoxFit.scaleDown,

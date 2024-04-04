@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:foodninja/core/helper/helper_function.dart';
 import 'package:foodninja/core/local_DB/cash_helper.dart';
 import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
+import 'package:foodninja/core/resources/strings_manager.dart';
 
 import 'package:foodninja/features/home/logic/cubit/home_cubit.dart';
+import 'package:foodninja/features/widget/default_search_bar.dart';
 
-import 'package:foodninja/features/home/ui/widget/food_item.dart';
+import 'package:foodninja/features/widget/food_item.dart';
 import 'package:foodninja/features/home/ui/widget/title_with_searchbar.dart';
 
 import 'package:foodninja/main.dart';
@@ -46,7 +49,12 @@ class _ExploreAllMenus extends State<ExploreAllMenus> {
                   padding: EdgeInsets.symmetric(horizontal: 5.w),
                   child: ListView(
                     children: [
-                      const TitleWithSearchBar(),
+                     const TitleWithSearchBar(),
+                      DefaultSearchBar(
+                        onTab: () {
+                          HelperFunction.pushToSearch(searchFor:AppStrings.menu,context: context);
+                        },
+                      ),
                       SizedBox(
                         height: 2.h,
                       ),

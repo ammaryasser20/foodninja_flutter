@@ -22,8 +22,9 @@ class ImageAssets {
   static const String paypal = "$imagePath/paypal.svg";
   static const String visa = "$imagePath/visa.svg";
   static const String payoneer = "$imagePath/Payoneer.svg";
-  static const String cameraIcon = "$imagePath/CameraIcon.svg";
-  static const String galleryIcon = "$imagePath/GalleryIcon.svg";
+
+  static const String camera = "$imagePath/camera.svg";
+  static const String gallery = "$imagePath/gallery.svg";
   static const String closeIcon = "$imagePath/closeIcon.svg";
   static const String done = "$imagePath/done.svg";
   static const String home = "$imagePath/home.svg";
@@ -49,6 +50,11 @@ class ImageAssets {
   static const String shoppingBag = "$imagePath/shoppingBag.svg";
   static const String profileImage = "$imagePath/nonprofile.jpeg";
   static const String logout = "$imagePath/logout.svg";
+  static const String searchNotFound = "$imagePath/searchNotFound.svg";
+  static const String totalOrder = "$imagePath/totalOrder.svg";
+  static const String cash = "$imagePath/Cash.png";
+  static const String delivery = "$imagePath/delivery.png";
+  static const String sendIcon = "$imagePath/sendIcon.svg";
 }
 
 class JsonAssets {}

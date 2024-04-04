@@ -127,4 +127,47 @@ class AppStrings {
       S.of(NavigationService.navigatorKey.currentContext!).addedToFavorite;
   static String get removeFromFavorite =>
       S.of(NavigationService.navigatorKey.currentContext!).removeFromFavorite;
+  static String get type =>
+      S.of(NavigationService.navigatorKey.currentContext!).type;
+  static String get menu =>
+      S.of(NavigationService.navigatorKey.currentContext!).menu;
+  static String get search =>
+      S.of(NavigationService.navigatorKey.currentContext!).search;
+  static String get searchNotFound =>
+      S.of(NavigationService.navigatorKey.currentContext!).searchNotFound;
+  static String get typeWhatYouWantToSearchFor => S
+      .of(NavigationService.navigatorKey.currentContext!)
+      .typeWhatYouWantToSearchFor;
+  static String get fromGallery =>
+      S.of(NavigationService.navigatorKey.currentContext!).fromGallery;
+  static String get takePhoto =>
+      S.of(NavigationService.navigatorKey.currentContext!).takePhoto;
+  static String get orderDetails =>
+      S.of(NavigationService.navigatorKey.currentContext!).orderDetails;
+  static String get addedToChart =>
+      S.of(NavigationService.navigatorKey.currentContext!).addedToChart;
+  static String get subTotal =>
+      S.of(NavigationService.navigatorKey.currentContext!).subTotal;
+  static String get deliveryCharge =>
+      S.of(NavigationService.navigatorKey.currentContext!).deliveryCharge;
+  static String get total =>
+      S.of(NavigationService.navigatorKey.currentContext!).total;
+  static String get placeMyOrder =>
+      S.of(NavigationService.navigatorKey.currentContext!).placeMyOrder;
+  static String get noOrder =>
+      S.of(NavigationService.navigatorKey.currentContext!).noOrder;
+  static String get cantBeLowerThan16 =>
+      S.of(NavigationService.navigatorKey.currentContext!).cantBeLowerThan16;
+  static String get confirmOrder =>
+      S.of(NavigationService.navigatorKey.currentContext!).confirmOrder;
+  static String get edit =>
+      S.of(NavigationService.navigatorKey.currentContext!).edit;
+  static String get delivery =>
+      S.of(NavigationService.navigatorKey.currentContext!).delivery;
+  static String get noMessages =>
+      S.of(NavigationService.navigatorKey.currentContext!).noMessages;
+  static String get yourOrderConfirmed =>
+      S.of(NavigationService.navigatorKey.currentContext!).yourOrderConfirmed;
+      static String get addOrder =>
+      S.of(NavigationService.navigatorKey.currentContext!).addOrder;
 }

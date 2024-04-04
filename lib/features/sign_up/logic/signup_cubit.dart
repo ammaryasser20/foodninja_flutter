@@ -7,7 +7,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:foodninja/core/helper/regex.dart';
-import 'package:foodninja/core/resources/routes_manager.dart';
+import 'package:foodninja/core/network/routes_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
 import 'package:foodninja/features/sign_up/data/models/register_request_body.dart';
 import 'package:foodninja/features/sign_up/data/repos/register_repo.dart';
@@ -20,7 +20,9 @@ class SignUpCubit extends Cubit<SignUpState> {
   bool emailMeAboutSpecialPricing = true;
   File? userImage;
   FireBaseServices fireBaseServices;
-  SignUpCubit(this._registerRepo,this.fireBaseServices) : super(const SignUpState.initial());
+  SignUpCubit(this._registerRepo, this.fireBaseServices)
+      : super(const SignUpState.initial());
+  static SignUpCubit get(context) => BlocProvider.of(context);
   void register(RegisterRequestBody registerRequestBody) async {
     emit(const SignUpState.loading());
     if (await Connectivity().checkConnectivity() != ConnectivityResult.none) {

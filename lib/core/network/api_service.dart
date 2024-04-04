@@ -31,4 +31,10 @@ abstract class ApiService {
   @GET("${ApiConstants.restaurant}/{id}")
   Future<AllRestaurant> getRestaurantByID(
       @Header('Authorization') String token, @Path("id") String id);
+  @GET("${ApiConstants.searchForRestaurant}/{name}")
+  Future<AllRestaurant> searchRestaurantByName(
+      @Header('Authorization') String token, @Path("name") String name);
+  @GET("${ApiConstants.searchForFood}/{name}")
+  Future<AllFood> searchFoodByName(
+      @Header('Authorization') String token, @Path("name") String name);
 }

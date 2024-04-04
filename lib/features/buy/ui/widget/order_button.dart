@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/font_manager.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 
-class DefaultBottom extends StatelessWidget {
-  const DefaultBottom({
+class OrderButton extends StatelessWidget {
+  const OrderButton({
     Key? key,
     required this.width,
     required this.height,
@@ -25,20 +26,19 @@ class DefaultBottom extends StatelessWidget {
           width: width,
           height: height,
           decoration: BoxDecoration(
+            color: ColorManager.nearlyWhite,
             borderRadius: BorderRadius.circular(15),
-            gradient: const LinearGradient(
-              colors: [
+          ),
+          child: Center(
+            child: GradientText(
+              text,
+              colors: const [
                 ColorManager.primaryColorLight,
                 ColorManager.primaryColor
               ],
-            ),
-          ),
-          child: Center(
-            child: Text(
-              text,
-              style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                  fontFamily: FontFamilies.bentonSansBold,
-                  color: ColorManager.white),
+              style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                    fontFamily: FontFamilies.bentonSansBold,
+                  ),
             ),
           )),
     );

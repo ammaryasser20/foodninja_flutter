@@ -10,7 +10,7 @@ import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/font_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
-import 'package:foodninja/features/widget/default_bottom.dart';
+import 'package:foodninja/features/widget/default_button.dart';
 import 'package:foodninja/features/widget/default_textformfield.dart';
 import 'package:foodninja/features/widget/logo.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -199,7 +199,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(
                 height: 2.h,
               ),
-              DefaultBottom(
+              DefaultButton(
                   text: AppStrings.createAccount,
                   width: 42.w,
                   height: 7.h,

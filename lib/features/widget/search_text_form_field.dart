@@ -38,6 +38,8 @@ class _SearchTextFormFieldState extends State<SearchTextFormField> {
       width: widget.wight,
       height: widget.hight,
       child: TextFormField(
+        controller: widget.controller,
+        readOnly: widget.readOnly,
         cursorColor: widget.cursorColor,
         onTap: widget.onTab,
         onFieldSubmitted: widget.onFieldSubmitted,
@@ -67,7 +69,9 @@ class _SearchTextFormFieldState extends State<SearchTextFormField> {
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
             borderSide: BorderSide(
-              color: widget.fillColor,
+              color: widget.readOnly
+                  ? widget.fillColor.withOpacity(0)
+                  : widget.fillColor,
             ),
           ),
         ),
