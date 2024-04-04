@@ -40,7 +40,7 @@
     "buyNow":"طلب الان",
     "restaurant": "مطاعم",
     "viewMore": "عرض المزيد",
-    "popularMenu": "قوائم شهيرة",
+    "popularMenus": "قوائم شهيرة",
     "popular":"مشهورة",
     "successAddImage": "تمت إضافة صورة الملف الشخصي بنجاح",
     "memberGold": "عضو ذهبي",
@@ -52,20 +52,30 @@
     "english":"English",
     "tryAgainLater": "حدث خطأ، يرجى المحاولة مرة أخرى لاحقًا",
     "addedToFavorite": "تمت إضافتها إلى المفضلة!",
-    "removeFromFavorite": "تمت إزالتها من المفضلة"
+    "removeFromFavorite": "تمت إزالتها من المفضلة",
+    "type": "نوع",
+    "menu":"وجبات",
+    "search": "بحث",
+    "searchNotFound": "لم يتم العثور على نتائج للبحث",
+    "typeWhatYouWantToSearchFor": "اكتب ما ترغب في البحث عنه",
+    "fromGallery": "من المعرض",
+    "takePhoto":"التقاط صورة",
+    "orderDetails": "تفاصيل الطلب",
+    "addedToChart": "تمت إضافتها إلى السلة",
+    "subTotal": "المجموع الفرعي",
+    "deliveryCharge": "رسوم التوصيل",
+    "total": "الإجمالي",
+    "placeMyOrder": "قدّم طلبي",
+    "noOrder": "لا يوجد طلب" ,
+    "cantBeLowerThan16": "لا يمكن أن يكون أقل من 16 رقمًا",
+    "confirmOrder": "تأكيد الطلب",
+    "edit": "تعديل",
+    "delivery": "التوصيل",
+    "noMessages": "لا توجد رسائل",
+    "yourOrderConfirmed": "تم تأكيد طلبك",
+    "addOrder": "إضافة طلب"
 
 
-
-
-
-
-
-
-
-
-
-
-  
 
 
 

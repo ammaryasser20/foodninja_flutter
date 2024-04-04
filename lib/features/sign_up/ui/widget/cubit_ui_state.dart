@@ -4,7 +4,7 @@ import 'package:foodninja/core/helper/helper_function.dart';
 import 'package:foodninja/core/local_DB/cash_helper.dart';
 
 import 'package:foodninja/core/resources/color_manager.dart';
-import 'package:foodninja/core/resources/routes_manager.dart';
+import 'package:foodninja/core/network/routes_manager.dart';
 
 import 'package:foodninja/features/sign_up/logic/signup_cubit.dart';
 import 'package:foodninja/features/sign_up/logic/signup_state.dart';

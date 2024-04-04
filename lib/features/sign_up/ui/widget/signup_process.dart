@@ -1,21 +1,19 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:foodninja/core/di/dependency_injection.dart';
 import 'package:foodninja/core/helper/helper_function.dart';
 import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
-import 'package:foodninja/core/resources/routes_manager.dart';
+import 'package:foodninja/core/network/routes_manager.dart';
 
 import 'package:foodninja/core/resources/strings_manager.dart';
 import 'package:foodninja/features/sign_up/logic/signup_cubit.dart';
 import 'package:foodninja/features/sign_up/logic/signup_state.dart';
 import 'package:foodninja/features/sign_up/ui/widget/payment_method.dart';
 import 'package:foodninja/features/sign_up/ui/widget/upload_photo.dart';
-import 'package:foodninja/features/widget/default_bottom.dart';
+import 'package:foodninja/features/widget/default_button.dart';
 import 'package:foodninja/main.dart';
 import 'package:sizer/sizer.dart';
 
@@ -41,8 +39,16 @@ class SignUpProcess extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 5.w),
                     child: Transform.flip(
                       flipX: isItArabic(),
-                      child: SvgPicture.asset(
-                        ImageAssets.back,
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(20),
+                        onTap: () {
+                          controller.previousPage(
+                              duration: const Duration(milliseconds: 500),
+                              curve: Curves.ease);
+                        },
+                        child: SvgPicture.asset(
+                          ImageAssets.back,
+                        ),
                       ),
                     ),
                   ),
@@ -55,10 +61,17 @@ class SignUpProcess extends StatelessWidget {
                   height: 75.h,
                   child: PageView(
                     controller: controller,
-                    children: const [PaymentMethod(), UploadPhoto()],
+                    children: [
+                      const PaymentMethod(),
+                      MultiBlocProvider(providers: [
+                        BlocProvider<SignUpCubit>.value(
+                          value: getIt<SignUpCubit>(),
+                        ),
+                      ], child: const UploadPhoto())
+                    ],
                   ),
                 ),
-                DefaultBottom(
+                DefaultButton(
                   width: 42.w,
                   height: 7.h,
                   text: AppStrings.next,

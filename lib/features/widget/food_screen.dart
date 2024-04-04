@@ -10,13 +10,14 @@ import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/font_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
+import 'package:foodninja/features/buy/logic/cubit/buy_cubit.dart';
 import 'package:foodninja/features/home/data/models/food.dart';
 import 'package:foodninja/features/home/data/models/restaurant.dart';
 import 'package:foodninja/features/home/logic/cubit/home_cubit.dart';
-import 'package:foodninja/features/home/ui/widget/restaurant_screen.dart';
+import 'package:foodninja/features/widget/restaurant_screen.dart';
 import 'package:foodninja/features/profile/logic/cubit/profile_cubit.dart';
 
-import 'package:foodninja/features/widget/default_bottom.dart';
+import 'package:foodninja/features/widget/default_button.dart';
 
 import 'package:foodninja/main.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -43,11 +44,13 @@ class _FoodScreenState extends State<FoodScreen> {
           );
         }
         return Scaffold(
-            floatingActionButton: DefaultBottom(
+            floatingActionButton: DefaultButton(
               height: 7.h,
               width: 90.w,
               text: 'Add To Chart',
-              onPressed: () {},
+              onPressed: () {
+                BuyCubit.get(context).addOrder(widget.food,widget.restaurant!);
+              },
             ),
             body: SafeArea(
               child: Stack(

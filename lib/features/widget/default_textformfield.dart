@@ -5,15 +5,18 @@ import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/font_manager.dart';
 
 class DefaultTextFormFiled extends StatefulWidget {
-  const DefaultTextFormFiled(
-      {super.key,
-      required this.hintText,
-      required this.controller,
-      this.prefix,
-      this.isItForPassword = false,
-      this.onFieldSubmitted,
-      this.focusNode,
-      this.textInputType});
+  const DefaultTextFormFiled({
+    super.key,
+    required this.hintText,
+    required this.controller,
+    this.prefix,
+    this.isItForPassword = false,
+    this.onFieldSubmitted,
+    this.focusNode,
+    this.textInputType,
+    this.maxLength,
+    this.onChanged,
+  });
   final String hintText;
   final TextEditingController controller;
   final String? prefix;
@@ -21,6 +24,8 @@ class DefaultTextFormFiled extends StatefulWidget {
   final Function(String v)? onFieldSubmitted;
   final FocusNode? focusNode;
   final TextInputType? textInputType;
+  final int? maxLength;
+  final Function(String)? onChanged;
   @override
   State<DefaultTextFormFiled> createState() => _DefaultTextFormFiledState();
 }
@@ -37,6 +42,8 @@ class _DefaultTextFormFiledState extends State<DefaultTextFormFiled> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onChanged: widget.onChanged,
+      maxLength: widget.maxLength,
       keyboardType: widget.textInputType,
       textDirection: TextDirection.ltr,
       obscureText: widget.isItForPassword ? !visible : false,

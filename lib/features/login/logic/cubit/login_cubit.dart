@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:foodninja/core/helper/regex.dart';
 import 'package:foodninja/core/local_DB/cash_helper.dart';
 import 'package:foodninja/core/network/firebase.dart';
-import 'package:foodninja/core/resources/routes_manager.dart';
+import 'package:foodninja/core/network/routes_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
 
 import 'package:foodninja/features/login/data/models/login_request_body.dart';

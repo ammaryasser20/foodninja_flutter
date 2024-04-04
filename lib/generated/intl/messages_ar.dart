@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addOrder": MessageLookupByLibrary.simpleMessage("إضافة طلب"),
+        "addedToChart":
+            MessageLookupByLibrary.simpleMessage("تمت إضافتها إلى السلة"),
         "addedToFavorite":
             MessageLookupByLibrary.simpleMessage("تمت إضافتها إلى المفضلة!"),
         "alreadyHaveAnAccount":
@@ -29,10 +32,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "buy": MessageLookupByLibrary.simpleMessage("شراء"),
         "buyNow": MessageLookupByLibrary.simpleMessage("طلب الان"),
+        "cantBeLowerThan16": MessageLookupByLibrary.simpleMessage(
+            "لا يمكن أن يكون أقل من 16 رقمًا"),
         "chat": MessageLookupByLibrary.simpleMessage("محادثة"),
+        "confirmOrder": MessageLookupByLibrary.simpleMessage("تأكيد الطلب"),
         "congrats": MessageLookupByLibrary.simpleMessage("مبروك!"),
         "createAccount": MessageLookupByLibrary.simpleMessage("أنشاء حساب"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
+        "delivery": MessageLookupByLibrary.simpleMessage("التوصيل"),
+        "deliveryCharge": MessageLookupByLibrary.simpleMessage("رسوم التوصيل"),
+        "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "emailAndPasswordInvalid": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني وكلمة المرور غير صالحين"),
@@ -42,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "favorites": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "forgotYourPassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمه المرور؟"),
+        "fromGallery": MessageLookupByLibrary.simpleMessage("من المعرض"),
         "haveNotAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "hintSearchTextFormFile":
@@ -58,11 +68,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginScreenTitle":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
         "memberGold": MessageLookupByLibrary.simpleMessage("عضو ذهبي"),
+        "menu": MessageLookupByLibrary.simpleMessage("وجبات"),
         "nameCantBeEmpty":
             MessageLookupByLibrary.simpleMessage("الاسم لا يمكن أن يكون فارغا"),
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
         "noInternetConnection":
             MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالإنترنت"),
+        "noMessages": MessageLookupByLibrary.simpleMessage("لا توجد رسائل"),
+        "noOrder": MessageLookupByLibrary.simpleMessage("لا يوجد طلب"),
         "onboardingSubTitleOne": MessageLookupByLibrary.simpleMessage(
             "!هنا يمكنك العثور على طاهٍ أو طبق لكل \nالأذواق والألوان. استمتع"),
         "onboardingSubTitleTwo": MessageLookupByLibrary.simpleMessage(
@@ -72,34 +85,48 @@ class MessageLookup extends MessageLookupByLibrary {
         "onboardingTitleTwo": MessageLookupByLibrary.simpleMessage(
             "نينجا فود هو المكان الذي يعيش فيه\n طعامك المفضل"),
         "orContinueWith": MessageLookupByLibrary.simpleMessage("او الدخول ب"),
+        "orderDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "paymentMethod": MessageLookupByLibrary.simpleMessage("طر يقة الدفع"),
+        "placeMyOrder": MessageLookupByLibrary.simpleMessage("قدّم طلبي"),
         "pleaseLoginAgain": MessageLookupByLibrary.simpleMessage(
             "الرجاء تسجيل الدخول مرة أخرى"),
         "popular": MessageLookupByLibrary.simpleMessage("مشهورة"),
+        "popularMenus": MessageLookupByLibrary.simpleMessage("قوائم شهيرة"),
         "profile": MessageLookupByLibrary.simpleMessage("صفحتك"),
         "removeFromFavorite":
             MessageLookupByLibrary.simpleMessage("تمت إزالتها من المفضلة"),
         "restaurant": MessageLookupByLibrary.simpleMessage("مطاعم"),
+        "search": MessageLookupByLibrary.simpleMessage("بحث"),
+        "searchNotFound": MessageLookupByLibrary.simpleMessage(
+            "لم يتم العثور على نتائج للبحث"),
         "signUpScreenTitle":
             MessageLookupByLibrary.simpleMessage("أنشاء حساب مجانى"),
         "specialDeal": MessageLookupByLibrary.simpleMessage(" عرض خلص\n لليوم"),
+        "subTotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
         "successAddImage": MessageLookupByLibrary.simpleMessage(
             "تمت إضافة صورة الملف الشخصي بنجاح"),
         "supTitleOfSignUpProcess": MessageLookupByLibrary.simpleMessage(
             "سيتم عرض هذه البيانات في ملف تعريف حسابك للحماية"),
+        "takePhoto": MessageLookupByLibrary.simpleMessage("التقاط صورة"),
         "theEmailHasAlreadyBeenTaken":
             MessageLookupByLibrary.simpleMessage("هذا البريد مستخدم بالفعل"),
         "theEmailOrPasswordIsIncorrect": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني أو كلمة المرور غير صحيحة"),
+        "total": MessageLookupByLibrary.simpleMessage("الإجمالي"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مجددا"),
         "tryAgainLater": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ، يرجى المحاولة مرة أخرى لاحقًا"),
+        "type": MessageLookupByLibrary.simpleMessage("نوع"),
+        "typeWhatYouWantToSearchFor":
+            MessageLookupByLibrary.simpleMessage("اكتب ما ترغب في البحث عنه"),
         "uploadYourPhotoProfile": MessageLookupByLibrary.simpleMessage(
             "قم بتحميل الصورة الخاصة بملفك الشخصى"),
         "userName": MessageLookupByLibrary.simpleMessage("ضع اسمك"),
         "viewMore": MessageLookupByLibrary.simpleMessage("عرض المزيد"),
         "wightMode": MessageLookupByLibrary.simpleMessage("وضع الإضاءة"),
+        "yourOrderConfirmed":
+            MessageLookupByLibrary.simpleMessage("تم تأكيد طلبك"),
         "yourProfileIsReadyToUse":
             MessageLookupByLibrary.simpleMessage("ملفك الشخصي جاهز للاستخدام")
       };

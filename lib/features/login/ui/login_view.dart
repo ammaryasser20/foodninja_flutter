@@ -9,7 +9,7 @@ import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/font_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
-import 'package:foodninja/features/widget/default_bottom.dart';
+import 'package:foodninja/features/widget/default_button.dart';
 import 'package:foodninja/features/widget/default_textformfield.dart';
 import 'package:foodninja/features/widget/logo.dart';
 import 'package:foodninja/main.dart';
@@ -124,6 +124,7 @@ class _LoginState extends State<Login> {
                 textDirection: TextDirection.ltr,
                 child: DefaultTextFormFiled(
                   focusNode: focus,
+                  isItForPassword: true,
                   hintText: AppStrings.password,
                   controller: passwordController,
                 ),
@@ -165,7 +166,7 @@ class _LoginState extends State<Login> {
             SizedBox(
               height: 4.h,
             ),
-            DefaultBottom(
+            DefaultButton(
               text: AppStrings.login,
               width: 42.w,
               height: 7.h,

@@ -4,12 +4,13 @@ import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/font_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
-import 'package:foodninja/features/home/ui/widget/default_search_bar.dart';
+
 import 'package:foodninja/main.dart';
 import 'package:sizer/sizer.dart';
 
 class TitleWithSearchBar extends StatelessWidget {
   const TitleWithSearchBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(children: [
@@ -53,7 +54,6 @@ class TitleWithSearchBar extends StatelessWidget {
           )
         ],
       ),
-   const   DefaultSearchBar()
     ]);
   }
 }

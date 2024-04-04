@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:foodninja/core/resources/assets_manager.dart';
@@ -45,7 +43,7 @@ class UploadPhoto extends StatelessWidget {
           ),
           BlocBuilder<SignUpCubit, SignUpState>(
             builder: (context, state) {
-              if (context.read<SignUpCubit>().userImage == null) {
+              if (SignUpCubit.get(context).userImage == null) {
                 return Column(
                   children: [
                     GetImageItem(
@@ -54,7 +52,8 @@ class UploadPhoto extends StatelessWidget {
                             .read<SignUpCubit>()
                             .setUserImage(ImageSource.gallery);
                       },
-                      image: ImageAssets.galleryIcon,
+                      image: ImageAssets.gallery,
+                      text: AppStrings.fromGallery,
                     ),
                     SizedBox(
                       height: 2.h,
@@ -65,7 +64,8 @@ class UploadPhoto extends StatelessWidget {
                             .read<SignUpCubit>()
                             .setUserImage(ImageSource.camera);
                       },
-                      image: ImageAssets.cameraIcon,
+                      image: ImageAssets.camera,
+                      text: AppStrings.takePhoto,
                     )
                   ],
                 );

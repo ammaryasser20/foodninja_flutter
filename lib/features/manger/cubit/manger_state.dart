@@ -1,12 +1,4 @@
-// import 'package:freezed_annotation/freezed_annotation.dart';
-//  part 'manger_state.freezed.dart';
 
-// @freezed
-// class MangerState with MangerState {
-//   const factory MangerState.initial() = _Initial;
-//   const factory MangerState.changeLanguage() = ChangeLanguage;
-//   const factory MangerState.changeMode() = ChangeMode;
-// }
 part of 'manger_cubit.dart';
 
 

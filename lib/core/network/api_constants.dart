@@ -5,6 +5,8 @@ class ApiConstants {
   static const String signUp = "auth/register/user";
   static const String restaurant = "restaurent";
   static const String food = "food";
+   static const String searchForFood = "filter/food";
+   static const String searchForRestaurant = "filter/restaurent";
 }
 
 class ApiErrors {

@@ -589,6 +589,216 @@ class S {
       args: [],
     );
   }
+
+  /// `Type`
+  String get type {
+    return Intl.message(
+      'Type',
+      name: 'type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Menu`
+  String get menu {
+    return Intl.message(
+      'Menu',
+      name: 'menu',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search not found`
+  String get searchNotFound {
+    return Intl.message(
+      'Search not found',
+      name: 'searchNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Type what you want to search for`
+  String get typeWhatYouWantToSearchFor {
+    return Intl.message(
+      'Type what you want to search for',
+      name: 'typeWhatYouWantToSearchFor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `From Gallery`
+  String get fromGallery {
+    return Intl.message(
+      'From Gallery',
+      name: 'fromGallery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Take Photo`
+  String get takePhoto {
+    return Intl.message(
+      'Take Photo',
+      name: 'takePhoto',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order details`
+  String get orderDetails {
+    return Intl.message(
+      'Order details',
+      name: 'orderDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Added To Chart`
+  String get addedToChart {
+    return Intl.message(
+      'Added To Chart',
+      name: 'addedToChart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sub-Total`
+  String get subTotal {
+    return Intl.message(
+      'Sub-Total',
+      name: 'subTotal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery Charge`
+  String get deliveryCharge {
+    return Intl.message(
+      'Delivery Charge',
+      name: 'deliveryCharge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total`
+  String get total {
+    return Intl.message(
+      'Total',
+      name: 'total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Place My Order`
+  String get placeMyOrder {
+    return Intl.message(
+      'Place My Order',
+      name: 'placeMyOrder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Order`
+  String get noOrder {
+    return Intl.message(
+      'No Order',
+      name: 'noOrder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cant be Lower than 16 number`
+  String get cantBeLowerThan16 {
+    return Intl.message(
+      'Cant be Lower than 16 number',
+      name: 'cantBeLowerThan16',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Order`
+  String get confirmOrder {
+    return Intl.message(
+      'Confirm Order',
+      name: 'confirmOrder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery`
+  String get delivery {
+    return Intl.message(
+      'Delivery',
+      name: 'delivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Messages`
+  String get noMessages {
+    return Intl.message(
+      'No Messages',
+      name: 'noMessages',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your order confirmed`
+  String get yourOrderConfirmed {
+    return Intl.message(
+      'Your order confirmed',
+      name: 'yourOrderConfirmed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Order`
+  String get addOrder {
+    return Intl.message(
+      'Add Order',
+      name: 'addOrder',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

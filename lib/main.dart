@@ -11,7 +11,7 @@ import 'package:foodninja/features/manger/cubit/manger_cubit.dart';
 import 'package:foodninja/firebase_options.dart';
 import 'package:foodninja/generated/l10n.dart';
 
-import 'package:foodninja/core/resources/routes_manager.dart';
+import 'package:foodninja/core/network/routes_manager.dart';
 import 'package:foodninja/core/resources/theme_manager.dart';
 import 'package:intl/intl.dart';
 import 'package:sizer/sizer.dart';
@@ -60,7 +60,7 @@ class _MyAppState extends State<MyApp> {
               ],
               supportedLocales: S.delegate.supportedLocales,
               onGenerateRoute: onGenerateRoute,
-              initialRoute: AppRoute.splashScreen,
+              initialRoute: AppRoute.login,
             );
           },
         );
@@ -70,7 +70,6 @@ class _MyAppState extends State<MyApp> {
 }
 
 bool isItDark() {
-  //return true;
   return MangerCubit.get(NavigationService.navigatorKey.currentContext).myMode;
 }
 

@@ -3,18 +3,22 @@ import 'package:flutter_svg/svg.dart';
 import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
-import 'package:foodninja/features/home/ui/widget/search_text_form_field.dart';
+import 'package:foodninja/features/widget/search_text_form_field.dart';
 import 'package:foodninja/main.dart';
+
 import 'package:sizer/sizer.dart';
 
 class DefaultSearchBar extends StatelessWidget {
-  const DefaultSearchBar({super.key,  this.controller});
-  final TextEditingController ? controller;
+  const DefaultSearchBar({super.key, this.controller,required this.onTab});
+  final TextEditingController? controller;
+    final void Function() onTab;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         SearchTextFormField(
+          onTab: onTab,
+          readOnly: true,
           cursorColor:
               isItDark() ? ColorManager.white : ColorManager.orangeLight,
           prefix: ImageAssets.iconSearch,

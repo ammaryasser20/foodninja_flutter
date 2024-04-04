@@ -1,7 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:foodninja/core/di/dependency_injection.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
+import 'package:foodninja/features/search/logic/cubit/search_cubit.dart';
+import 'package:foodninja/features/search/ui/search_view.dart';
 import 'package:foodninja/main.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
@@ -48,6 +52,20 @@ class HelperFunction {
         NavigationService.navigatorKey.currentContext!, routeName);
   }
 
+  static void pushToSearch({String? searchFor, required BuildContext context}) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => BlocProvider(
+          create: (context) => getIt<SearchCubit>(),
+          child: SearchScreen(
+            searchFor: searchFor,
+          ),
+        ),
+      ),
+    );
+  }
+
   static void pushReplacementNamed(String routeName) {
     Navigator.pushReplacementNamed(
         NavigationService.navigatorKey.currentContext!, routeName);
@@ -58,5 +76,17 @@ class HelperFunction {
         NavigationService.navigatorKey.currentContext!,
         routeName,
         (route) => false);
+  }
+
+ static String textSplit(String text) {
+    String newText = '';
+    for (int i = 0; text.length > i; i++) {
+      if (i % 4 == 0) {
+        newText = "$newText ${text[i]}";
+      } else {
+        newText = newText + text[i];
+      }
+    }
+    return newText;
   }
 }

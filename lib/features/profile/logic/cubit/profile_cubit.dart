@@ -4,25 +4,29 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:foodninja/core/helper/helper_function.dart';
 import 'package:foodninja/core/local_DB/cached_app.dart';
 import 'package:foodninja/core/local_DB/cash_helper.dart';
 
 import 'package:foodninja/core/network/firebase.dart';
+
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
 import 'package:foodninja/features/home/data/models/food.dart';
 import 'package:foodninja/features/home/data/models/restaurant.dart';
 import 'package:foodninja/features/login/data/models/login_response.dart';
 import 'package:foodninja/features/profile/data/repo/repos.dart';
+import 'package:foodninja/features/widget/image_selection.dart';
 import 'package:foodninja/main.dart';
 import 'package:image_picker/image_picker.dart';
+
 part 'profile_state.dart';
 
 class ProfileCubit extends Cubit<ProfileState> {
   ProfileRepo profileRepo;
   List<dynamic>? favoriteIDs;
-  Map<String, Restaurant?> favoriteRestaurantWithIDs={};
+  Map<String, Restaurant?> favoriteRestaurantWithIDs = {};
   List<Food> favoriteFoods = [];
   CachedApp cachedApp;
   ProfileCubit(this.fireBaseServices, this.profileRepo, this.cachedApp)
@@ -32,10 +36,24 @@ class ProfileCubit extends Cubit<ProfileState> {
   File? userImageFile;
   String userImageString = '';
   FireBaseServices fireBaseServices;
+  Future<void> showImagePickerOption(BuildContext context) async {
+    showModalBottomSheet(
+      context: context,
+      builder: (_) {
+        return ImageSelection(functionCamera: () async {
+          await setUserImage(ImageSource.camera);
+        }, functionGallery: () async {
+          await setUserImage(ImageSource.gallery);
+        });
+      },
+    );
+  }
+
   Future<void> setUserImage(ImageSource imageSource) async {
     userImageFile = await HelperFunction.setImage(imageSource);
     if (userImageFile != null) {
       if (await Connectivity().checkConnectivity() != ConnectivityResult.none) {
+        emit(ProfileLoading());
         final file = File(userImageFile!.path);
         if (await fireBaseServices.uploadImage(
           file: file,
@@ -43,7 +61,14 @@ class ProfileCubit extends Cubit<ProfileState> {
             key: Keys.userID,
           ),
         )) {
-          emit(ProfileSuccessUploadingImage());
+          userImageString = await fireBaseServices.downloadImage(
+                id: CashHelper.getInt(key: Keys.userID),
+              ) ??
+              '';
+          if (userImageString != '') {
+            CashHelper.putString(key: Keys.userImage, value: userImageString);
+          }
+          emit(ProfileSuccessGetAllInfo());
           ScaffoldMessenger.of(NavigationService.navigatorKey.currentContext!)
               .showSnackBar(SnackBar(
             duration: const Duration(milliseconds: 500),
@@ -85,17 +110,16 @@ class ProfileCubit extends Cubit<ProfileState> {
                 favoriteRestaurantWithIDs[data.food![0].restaurantId!] = null;
               }
             }
-            cachedApp.saveData(favoriteFoods, CachedKeys.favoriteData);
           }
+          cachedApp.saveData(favoriteFoods, CachedKeys.favoriteData);
         }
       }
+
       emit(ProfileSuccessGetAllInfo());
     } else {
       ProfileError(error: AppStrings.pleaseLoginAgain);
     }
   }
-
-
 
   Future<void> addFavorite(Food food) async {
     if (await profileRepo.addUserFavorite(
@@ -116,7 +140,7 @@ class ProfileCubit extends Cubit<ProfileState> {
           .showSnackBar(
         SnackBar(
           backgroundColor: ColorManager.orange,
-          content: Text(AppStrings.tryAgainLater),
+          content: Text(AppStrings.typeWhatYouWantToSearchFor),
         ),
       );
     }

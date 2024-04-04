@@ -11,11 +11,12 @@ import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/font_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
+import 'package:foodninja/features/buy/logic/cubit/buy_cubit.dart';
 import 'package:foodninja/features/home/data/models/food.dart';
 import 'package:foodninja/features/home/data/models/restaurant.dart';
 import 'package:foodninja/features/home/logic/cubit/home_cubit.dart';
 
-import 'package:foodninja/features/home/ui/widget/food_screen.dart';
+import 'package:foodninja/features/widget/food_screen.dart';
 import 'package:foodninja/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:foodninja/main.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -337,9 +338,23 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                                         getIt<ProfileCubit>(),
                                                   ),
                                                 ],
-                                                child: FoodScreen(
-                                                  food: foods![index],
-                                                  restaurant: widget.restaurant,
+                                                child: MultiBlocProvider(
+                                                  providers: [
+                                                    BlocProvider<
+                                                        ProfileCubit>.value(
+                                                      value:
+                                                          getIt<ProfileCubit>(),
+                                                    ),
+                                                    BlocProvider<
+                                                        BuyCubit>.value(
+                                                      value: getIt<BuyCubit>(),
+                                                    ),
+                                                  ],
+                                                  child: FoodScreen(
+                                                    food: foods![index],
+                                                    restaurant:
+                                                        widget.restaurant,
+                                                  ),
                                                 ),
                                               ),
                                             ),

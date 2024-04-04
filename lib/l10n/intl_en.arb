@@ -52,6 +52,27 @@
     "english":"الانجليزية",
     "tryAgainLater":"An error occurred, please try again later",
     "addedToFavorite":"Added to favorite!",
-    "removeFromFavorite":"Removed from Favorite"
+    "removeFromFavorite":"Removed from Favorite",
+    "type":"Type",
+    "menu":"Menu",
+    "search":"Search",
+    "searchNotFound":"Search not found",
+    "typeWhatYouWantToSearchFor":"Type what you want to search for",
+    "fromGallery":"From Gallery",
+    "takePhoto":"Take Photo",
+    "orderDetails":"Order details",
+    "addedToChart":"Added To Chart",
+    "subTotal":"Sub-Total",
+    "deliveryCharge":"Delivery Charge",
+    "total":"Total",
+    "placeMyOrder":"Place My Order",
+    "noOrder":"No Order",
+    "cantBeLowerThan16":"Cant be Lower than 16 number",
+    "confirmOrder":"Confirm Order",
+    "edit":"Edit",
+    "delivery":"Delivery",
+    "noMessages":"No Messages",
+    "yourOrderConfirmed":"Your order confirmed",
+    "addOrder":"Add Order"
  
 } 
