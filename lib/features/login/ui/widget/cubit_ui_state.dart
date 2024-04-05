@@ -20,6 +20,8 @@ class LoginBlocListener extends StatelessWidget {
         state.whenOrNull(
           loading: () {
             showDialog(
+              barrierDismissible: false,
+
               context: context,
               builder: (context) => const Center(
                 child: CircularProgressIndicator(

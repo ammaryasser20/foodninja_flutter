@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -45,9 +46,11 @@ class _MyAppState extends State<MyApp> {
               navigatorKey: NavigationService.navigatorKey,
               theme: Themes.lightTheme,
               darkTheme: Themes.darkTheme,
-              themeMode: MangerCubit.get(context).myMode
-                  ? ThemeMode.dark
-                  : ThemeMode.light,
+              themeMode: MangerCubit.get(context).myMode != null
+                  ? MangerCubit.get(context).myMode!
+                      ? ThemeMode.dark
+                      : ThemeMode.light
+                  : ThemeMode.system,
               locale: Locale(MangerCubit.get(context).myLanguage == ''
                   ? 'en'
                   : MangerCubit.get(context).myLanguage),
@@ -60,7 +63,7 @@ class _MyAppState extends State<MyApp> {
               ],
               supportedLocales: S.delegate.supportedLocales,
               onGenerateRoute: onGenerateRoute,
-              initialRoute: AppRoute.login,
+              initialRoute: AppRoute.splashScreen,
             );
           },
         );
@@ -70,7 +73,15 @@ class _MyAppState extends State<MyApp> {
 }
 
 bool isItDark() {
-  return MangerCubit.get(NavigationService.navigatorKey.currentContext).myMode;
+  if (MangerCubit.get(NavigationService.navigatorKey.currentContext).myMode ==
+      null) {
+    var brightness =
+        SchedulerBinding.instance.platformDispatcher.platformBrightness;
+    return brightness == Brightness.dark;
+  } else {
+    return MangerCubit.get(NavigationService.navigatorKey.currentContext)
+        .myMode!;
+  }
 }
 
 bool isItArabic() {

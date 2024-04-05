@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum Keys {
@@ -38,7 +39,6 @@ class CashHelper {
   }
 
   static bool getBool({required Keys key}) {
-
     return sharedPreferences.getBool(key.name) ?? false;
   }
 
@@ -51,8 +51,14 @@ class CashHelper {
     return sharedPreferences.getDouble(key.name) ?? 0;
   }
 
+  static bool? getMode() {
+    return sharedPreferences.getBool(Keys.darkMode.name);
+  }
+
   static clear() async {
-    final bool dark = getBool(key: Keys.darkMode);
+    final bool dark = CashHelper.getMode() ?? ThemeMode.system == ThemeMode.dark
+        ? true
+        : false;
     final language = getString(key: Keys.language);
     await sharedPreferences.clear();
     await sharedPreferences.setBool(Keys.notFirstTime.name, true);

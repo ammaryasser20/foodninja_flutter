@@ -53,6 +53,7 @@ class ProfileCubit extends Cubit<ProfileState> {
     userImageFile = await HelperFunction.setImage(imageSource);
     if (userImageFile != null) {
       if (await Connectivity().checkConnectivity() != ConnectivityResult.none) {
+        Navigator.pop(NavigationService.navigatorKey.currentContext!);
         emit(ProfileLoading());
         final file = File(userImageFile!.path);
         if (await fireBaseServices.uploadImage(
@@ -71,6 +72,7 @@ class ProfileCubit extends Cubit<ProfileState> {
           emit(ProfileSuccessGetAllInfo());
           ScaffoldMessenger.of(NavigationService.navigatorKey.currentContext!)
               .showSnackBar(SnackBar(
+            backgroundColor: ColorManager.primaryColor,
             duration: const Duration(milliseconds: 500),
             content: Text(AppStrings.successAddImage),
           ));
@@ -87,6 +89,7 @@ class ProfileCubit extends Cubit<ProfileState> {
 
   Future<void> getUserInfo() async {
     favoriteFoods = [];
+
     emit(ProfileLoading());
     userImageString = CashHelper.getString(key: Keys.userImage);
     final info = CashHelper.getString(key: Keys.userInfo);

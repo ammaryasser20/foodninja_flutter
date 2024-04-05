@@ -42,7 +42,6 @@ class LoginCubit extends Cubit<LoginState> {
         map = loginResponse!.loginResponseToJson();
         String userInfo = jsonEncode(map["user"]);
         await CashHelper.putString(key: Keys.userInfo, value: userInfo);
-
         await CashHelper.putInt(
             key: Keys.userID, value: loginResponse!.user!.id!);
         await CashHelper.putString(key: Keys.token, value: map["token"]);
