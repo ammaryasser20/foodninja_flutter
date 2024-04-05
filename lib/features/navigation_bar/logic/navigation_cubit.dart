@@ -144,46 +144,44 @@ class NavigationCubit extends Cubit<NavigationState> {
           ),
         )
       ];
-  get screen {
-    return [
-      MultiBlocProvider(
-        providers: [
-          BlocProvider<ProfileCubit>.value(
-            value: getIt<ProfileCubit>(),
-          ),
-          BlocProvider<HomeCubit>.value(
-            value: getIt<HomeCubit>(),
-          ),
-        ],
-        child: const HomeScreen(),
-      ),
-      MultiBlocProvider(
-        providers: [
-          BlocProvider<ChatCubit>.value(
-            value: getIt<ChatCubit>(),
-          ),
-          BlocProvider<ProfileCubit>.value(
-            value: getIt<ProfileCubit>(),
-          ),
-          BlocProvider<BuyCubit>.value(
-            value: getIt<BuyCubit>(),
-          ),
-        ],
-        child: const ProfileScreen(),
-      ),
-      MultiBlocProvider(
-        providers: [
-          BlocProvider<BuyCubit>.value(
-            value: getIt<BuyCubit>(),
-          ),
-        ],
-        child: const BuyScreen(),
-      ),
-      MultiBlocProvider(providers: [
+  List<Widget> screen = [
+    MultiBlocProvider(
+      providers: [
+        BlocProvider<ProfileCubit>.value(
+          value: getIt<ProfileCubit>(),
+        ),
+        BlocProvider<HomeCubit>.value(
+          value: getIt<HomeCubit>(),
+        ),
+      ],
+      child: const HomeScreen(),
+    ),
+    MultiBlocProvider(
+      providers: [
         BlocProvider<ChatCubit>.value(
           value: getIt<ChatCubit>(),
         ),
-      ], child: const ChatScreen())
-    ];
-  }
+        BlocProvider<ProfileCubit>.value(
+          value: getIt<ProfileCubit>(),
+        ),
+        BlocProvider<BuyCubit>.value(
+          value: getIt<BuyCubit>(),
+        ),
+      ],
+      child: const ProfileScreen(),
+    ),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider<BuyCubit>.value(
+          value: getIt<BuyCubit>(),
+        ),
+      ],
+      child: const BuyScreen(),
+    ),
+    MultiBlocProvider(providers: [
+      BlocProvider<ChatCubit>.value(
+        value: getIt<ChatCubit>(),
+      ),
+    ], child: const ChatScreen())
+  ];
 }

@@ -26,34 +26,47 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   Widget build(BuildContext context) {
     return BlocBuilder<NavigationCubit, NavigationState>(
       builder: (context, state) {
-        return Scaffold(
-          floatingActionButtonLocation:
-              FloatingActionButtonLocation.centerDocked,
-          extendBody: true,
-          body: PageView(
-            controller: controller,
-            physics: const NeverScrollableScrollPhysics(),
-            children: screens,
-          ),
-          floatingActionButton: Container(
-            margin: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.h),
-            padding: const EdgeInsets.all(15),
-            clipBehavior: Clip.hardEdge,
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: isItDark()
-                      ? ColorManager.darkShadow.withOpacity(.1)
-                      : ColorManager.whiteShadow.withOpacity(.1),
-                  blurRadius: 50,
-                )
-              ],
-              color: isItDark() ? ColorManager.liteGray : ColorManager.white,
-              borderRadius: BorderRadius.circular(22),
+        return PopScope(
+          canPop: NavigationCubit.get(context).index == 0,
+          onPopInvoked: (didPop) {
+            if (NavigationCubit.get(context).index != 0) {
+              controller.animateToPage(0,
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.ease);
+              NavigationCubit.get(context).changeIndex(newIndex: 0);
+            } else {
+              Navigator.pop(context);
+            }
+          },
+          child: Scaffold(
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.centerDocked,
+            extendBody: true,
+            body: PageView(
+              controller: controller,
+              physics: const NeverScrollableScrollPhysics(),
+              children: screens,
             ),
-            child: GNav(
+            floatingActionButton: Container(
+              margin: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.h),
+              padding: const EdgeInsets.all(15),
+              clipBehavior: Clip.hardEdge,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: isItDark()
+                        ? ColorManager.darkShadow.withOpacity(.1)
+                        : ColorManager.whiteShadow.withOpacity(.1),
+                    blurRadius: 50,
+                  )
+                ],
+                color: isItDark() ? ColorManager.liteGray : ColorManager.white,
+                borderRadius: BorderRadius.circular(22),
+              ),
+              child: GNav(
                 gap: 10,
                 tabBorderRadius: 12,
+                selectedIndex: NavigationCubit.get(context).index,
                 padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 1.5.h),
                 tabBackgroundGradient: LinearGradient(
                   colors: [
@@ -69,7 +82,9 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
                       duration: const Duration(milliseconds: 500),
                       curve: Curves.ease);
                 },
-                tabs: NavigationCubit.get(context).getTabs(context)),
+                tabs: NavigationCubit.get(context).getTabs(context),
+              ),
+            ),
           ),
         );
       },

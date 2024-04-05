@@ -8,7 +8,7 @@ class MangerCubit extends Cubit<MangerState> {
   static MangerCubit get(context) => BlocProvider.of(context);
 
   String myLanguage = CashHelper.getString(key: Keys.language);
-  bool myMode = CashHelper.getBool(key: Keys.darkMode);
+  bool? myMode = CashHelper.getMode() ;
   Future<void> changeLanguage(String language) async {
     myLanguage = language;
     await CashHelper.putString(key: Keys.language, value: language);

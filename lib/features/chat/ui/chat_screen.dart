@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:foodninja/core/network/routes_manager.dart';
@@ -7,7 +6,6 @@ import 'package:foodninja/core/resources/assets_manager.dart';
 import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/font_manager.dart';
 import 'package:foodninja/core/resources/strings_manager.dart';
-
 import 'package:foodninja/features/chat/logic/cubit/chat_cubit.dart';
 import 'package:foodninja/features/navigation_bar/logic/navigation_cubit.dart';
 import 'package:foodninja/main.dart';
@@ -29,8 +27,9 @@ class _ChatScreenState extends State<ChatScreen> {
         return Stack(
           children: [
             Transform.flip(
-                flipX: isItArabic(),
-                child: SvgPicture.asset(ImageAssets.pattern2, width: 100.w)),
+              flipX: isItArabic(),
+              child: SvgPicture.asset(ImageAssets.pattern2, width: 100.w),
+            ),
             SafeArea(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 5.w),
@@ -48,6 +47,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           onTap: () {
                             NavigationCubit.get(context)
                                 .changeIndex(newIndex: 0);
+                                
                           },
                           child: SvgPicture.asset(
                             ImageAssets.back,

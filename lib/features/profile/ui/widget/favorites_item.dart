@@ -105,9 +105,7 @@ class FavoritesItem extends StatelessWidget {
                                 .displayLarge!
                                 .copyWith(
                                     fontFamily: FontFamilies.bentonSansMedium),
-                          )
-                              
-                              ),
+                          )),
                         ],
                       ),
                     ),
@@ -144,7 +142,12 @@ class FavoritesItem extends StatelessWidget {
                 const Spacer(),
                 BuyAgainButton(
                   text: AppStrings.addOrder,
-                  onPressed: () {},
+                  onPressed: () {
+                    BuyCubit.get(context).addOrder(
+                        food,
+                        ProfileCubit.get(context)
+                            .favoriteRestaurantWithIDs[food.restaurantId]!);
+                  },
                 ),
               ],
             ),
