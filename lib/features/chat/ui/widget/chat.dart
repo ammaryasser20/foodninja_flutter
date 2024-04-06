@@ -19,6 +19,7 @@ class Chat extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ChatCubit, ChatState>(
       builder: (context, state) {
+        
         return Scaffold(
           appBar: AppBar(
             leading: Padding(

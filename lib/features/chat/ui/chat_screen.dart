@@ -123,6 +123,7 @@ class _ChatScreenState extends State<ChatScreen> {
                                     child: Row(
                                       children: [
                                         Flexible(
+                                          
                                           child: Text(
                                             ChatCubit.get(context)
                                                 .chat
