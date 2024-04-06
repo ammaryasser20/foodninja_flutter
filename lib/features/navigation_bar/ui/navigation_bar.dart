@@ -17,7 +17,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
 
   @override
   void initState() {
- //   screens = NavigationCubit.get(context).screen;
+
     NavigationCubit.get(context).changeIndex(newIndex: 0);
     super.initState();
   }

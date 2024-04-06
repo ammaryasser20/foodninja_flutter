@@ -47,7 +47,6 @@ class _ChatScreenState extends State<ChatScreen> {
                           onTap: () {
                             NavigationCubit.get(context)
                                 .changeIndex(newIndex: 0);
-                                
                           },
                           child: SvgPicture.asset(
                             ImageAssets.back,
@@ -127,7 +126,7 @@ class _ChatScreenState extends State<ChatScreen> {
                                           child: Text(
                                             ChatCubit.get(context)
                                                 .chat
-                                                .last
+                                                .first
                                                 .message,
                                             maxLines: 1,
                                             overflow: TextOverflow.ellipsis,
