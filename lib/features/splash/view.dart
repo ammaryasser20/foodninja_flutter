@@ -20,11 +20,11 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   Timer? timer;
 
-  _startDelay() {
-    timer = Timer(const Duration(seconds: 2), _goNext);
+  startDelay() {
+    timer = Timer(const Duration(milliseconds: 500), goNext);
   }
 
-  _goNext()  {
+  goNext() {
     if (CashHelper.getBool(key: Keys.notFirstTime)) {
       Navigator.pushReplacementNamed(context, AppRoute.login);
     } else {
@@ -35,7 +35,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    _startDelay();
+    WidgetsBinding.instance.addPostFrameCallback((_) => startDelay());
+    ();
   }
 
   @override
@@ -46,7 +47,6 @@ class _SplashScreenState extends State<SplashScreen> {
       width: 100.w,
       child: Center(
         child: Column(
-          // fit: StackFit.expand,
           children: [
             Container(
               foregroundDecoration: BoxDecoration(
@@ -60,7 +60,6 @@ class _SplashScreenState extends State<SplashScreen> {
                           ColorManager.white.withOpacity(.8),
                           ColorManager.white.withOpacity(0.0)
                         ],
-                  //   stops: [0.50, 0.4],
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
                 ),

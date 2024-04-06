@@ -36,7 +36,8 @@ class DefaultButton extends StatelessWidget {
           child: Center(
             child: Text(
               text,
-              style: Theme.of(context).textTheme.displayLarge!.copyWith(
+              style: Theme.of(context).textTheme.displayLarge
+              !.copyWith(
                   fontFamily: FontFamilies.bentonSansBold,
                   color: ColorManager.white),
             ),

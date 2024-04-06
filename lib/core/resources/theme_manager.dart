@@ -4,7 +4,8 @@ import 'package:foodninja/core/resources/color_manager.dart';
 import 'package:foodninja/core/resources/font_manager.dart';
 
 class Themes {
-  static ThemeData lightTheme = ThemeData(
+  Themes();
+  ThemeData get lightTheme => ThemeData(
     colorScheme: const ColorScheme.light(
       primary: ColorManager.primaryColor,
     ),
@@ -49,7 +50,7 @@ class Themes {
     ),
   );
 
-  static ThemeData darkTheme = ThemeData(
+  ThemeData get darkTheme => ThemeData(
     colorScheme: const ColorScheme.dark(
       primary: ColorManager.primaryColor,
     ),

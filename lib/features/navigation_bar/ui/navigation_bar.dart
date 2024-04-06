@@ -14,10 +14,11 @@ class NavigationBarScreen extends StatefulWidget {
 }
 
 class _NavigationBarScreenState extends State<NavigationBarScreen> {
-  late List<Widget> screens;
+
   @override
   void initState() {
-    screens = NavigationCubit.get(context).screen;
+ //   screens = NavigationCubit.get(context).screen;
+    NavigationCubit.get(context).changeIndex(newIndex: 0);
     super.initState();
   }
 
@@ -45,7 +46,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             body: PageView(
               controller: controller,
               physics: const NeverScrollableScrollPhysics(),
-              children: screens,
+              children: NavigationCubit.get(context).screen,
             ),
             floatingActionButton: Container(
               margin: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.h),
