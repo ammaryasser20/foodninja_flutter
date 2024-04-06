@@ -36,7 +36,7 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<RegisterRepo>(() => (RegisterRepo(getIt())));
   getIt.registerLazySingleton<SignUpCubit>(
       () => (SignUpCubit(getIt(), getIt())));
-  getIt.registerFactory<NavigationCubit>(() => (NavigationCubit()));
+  getIt.registerLazySingleton<NavigationCubit>(() => (NavigationCubit()));
   getIt.registerLazySingleton<HomeRepo>(() => (HomeRepo(getIt(), getIt())));
   getIt.registerLazySingleton<CachedApp>(() => (CachedApp()));
   getIt.registerLazySingleton<ProfileRepo>(

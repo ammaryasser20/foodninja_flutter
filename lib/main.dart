@@ -34,6 +34,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  Themes themes=Themes();
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -44,8 +45,8 @@ class _MyAppState extends State<MyApp> {
           builder: (context, state) {
             return MaterialApp(
               navigatorKey: NavigationService.navigatorKey,
-              theme: Themes.lightTheme,
-              darkTheme: Themes.darkTheme,
+              theme: themes.lightTheme,
+              darkTheme: themes.darkTheme,
               themeMode: MangerCubit.get(context).myMode != null
                   ? MangerCubit.get(context).myMode!
                       ? ThemeMode.dark
